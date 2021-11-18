@@ -1,0 +1,19 @@
+﻿using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+using Web.Cars.Data.Identity;
+
+namespace ServerForReact.Data.Identity
+{
+    public class AppUser : IdentityUser<long>
+    {
+        //[StringLength(255)]
+        //public string Photo { get; set; }
+        //[StringLength(255)]
+        //public string FIO { get; set; }
+        public virtual ICollection<AppUserRole> UserRoles { get; set; }
+    }
+}
