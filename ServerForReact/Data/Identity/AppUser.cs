@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using ServerForReact.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,10 +11,16 @@ namespace ServerForReact.Data.Identity
 {
     public class AppUser : IdentityUser<long>
     {
-        //[StringLength(255)]
-        //public string Photo { get; set; }
-        //[StringLength(255)]
-        //public string FIO { get; set; }
+        [Required, StringLength(255)]
+        public string Photo { get; set; }
+        [Required, StringLength(255)]
+        public string Surname { get; set; }
+        [Required]
+        public int Age { get; set; }
+        [Required]
+        public DateTime JoinCourse { get; set; }
+
+        public virtual ICollection<Courses> CourseId { get; set; }
         public virtual ICollection<AppUserRole> UserRoles { get; set; }
     }
 }

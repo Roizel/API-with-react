@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace ServerForReact.Data
         {
 
         }
+        public DbSet<Courses> courses{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
