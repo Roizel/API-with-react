@@ -60,5 +60,61 @@ namespace ServerForReact.Services
             return _jwtTokenService.CreateToken(student);
 
         }
+
+        public string DeleteStudent(int id)
+        {
+            try
+            {
+                var student = _userManager.Users.SingleOrDefault(x => x.Id == id);
+                if (student == null)
+                    return "Student does not exist";    /*Bedrik*/
+                if (student.Photo != null)
+                {
+                    var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
+                    var FilePath = Path.Combine(directory, student.Photo);
+                    System.IO.File.Delete(FilePath);
+                }
+                _context.Users.Remove(student);
+                _context.SaveChangesAsync();
+                return $"Student {student.UserName} {student.Surname} wad deleted successfully";
+            }
+            catch (AccountException aex) /*If Bad, send errors to Frontend*/
+            {
+                return $"{aex.AccountError}";
+            }
+            catch (Exception ex) /*For undefined exceptions*/
+            {
+                return $"Something went wrong on server: {ex.Message}"; /*Send bedrik to frontend*/
+            }
+        }
+
+        public async Task<string> LoginStudent(LoginViewModel model) /*Під очень великім вопросом*/
+        {
+            try
+            {
+                var student = await _userManager.FindByEmailAsync(model.Email); /*І так ясно*/
+                if (student == null)
+                    return "Email does not exist";
+                if (await _userManager.CheckPasswordAsync(student, model.Password)) /*І так ясно*/
+                {
+                    string token = _jwtTokenService.CreateToken(student); /*Create token and send it to client*/
+                    return token;
+                }
+                else
+                {
+                    //var exc = new AccountError();
+                    //exc.Errors.Invalid.Add("Wrong password!");
+                    return "Wrong password";
+                }
+            }
+            catch (AccountException aex)
+            {
+                return $"Error: {aex.AccountError}";
+            }
+            catch (Exception ex)
+            {
+                return $"Something went wrong on server: {ex.Message}";
+            }
+        }
     }
 }

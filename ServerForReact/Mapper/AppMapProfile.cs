@@ -15,6 +15,8 @@ namespace ServerForReact.Mapper
             CreateMap<RegisterViewModel, AppUser>()
               .ForMember(x => x.Photo, opt => opt.Ignore())
               .ForMember(x => x.UserName, opt => opt.MapFrom(x => x.Name));
+            CreateMap<AppUser, StudentViewModel>()
+           .ForMember(x => x.Photo, opt => opt.MapFrom(x => "/images/" + x.Photo));
         }
     }
 }

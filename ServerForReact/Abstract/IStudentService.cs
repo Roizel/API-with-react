@@ -9,5 +9,8 @@ namespace ServerForReact.Abstract
     public interface IStudentService
     {
         public Task<string> CreateStudent(RegisterViewModel model);
+        public Task<string> LoginStudent(LoginViewModel model);
+        //public void UpdateStudent(RegisterViewModel model);
+        public string DeleteStudent(int id);
     }
 }
