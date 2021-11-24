@@ -61,7 +61,7 @@ namespace ServerForReact.Services
 
         }
 
-        public string DeleteStudent(int id)
+        public async Task<string> DeleteStudent(int id)
         {
             try
             {
@@ -75,8 +75,8 @@ namespace ServerForReact.Services
                     System.IO.File.Delete(FilePath);
                 }
                 _context.Users.Remove(student);
-                _context.SaveChangesAsync();
-                return $"Student {student.UserName} {student.Surname} wad deleted successfully";
+                await _context.SaveChangesAsync();
+                return $"Student {student.UserName} {student.Surname} was deleted successfully";
             }
             catch (AccountException aex) /*If Bad, send errors to Frontend*/
             {

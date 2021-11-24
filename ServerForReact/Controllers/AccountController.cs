@@ -79,11 +79,11 @@ namespace ServerForReact.Controllers
         }
         [Route("delete/{id}")] /*[HttpPost("register")] - хз чого, но так не робить, треба писати HttpPost i Route*/
         [HttpDelete]
-        public string DeleteStudent(int id)
+        public async Task<string> DeleteStudent(int id)
         {
             try
             {
-                string delete = studentService.DeleteStudent(id);
+                string delete = await studentService.DeleteStudent(id);
                 return delete;
             }
             catch (Exception ex)

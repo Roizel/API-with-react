@@ -20,7 +20,7 @@ namespace ServerForReact.Data
         {
 
         }
-        public DbSet<Courses> courses{ get; set; }
+        public DbSet<Courses> Courses{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

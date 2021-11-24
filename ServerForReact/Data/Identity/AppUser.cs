@@ -19,8 +19,7 @@ namespace ServerForReact.Data.Identity
         public int Age { get; set; }
         [Required]
         public DateTime JoinCourse { get; set; }
-
-        public virtual ICollection<Courses> CourseId { get; set; }
+        public virtual ICollection<Courses> Course { get; set; }
         public virtual ICollection<AppUserRole> UserRoles { get; set; }
     }
 }

@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace ServerForReact.Data.Entities
 {
-    //[Table("tblStudentCourses")]
     //public class StudentCourses
     //{
     //    public virtual AppUser User { get; set; }

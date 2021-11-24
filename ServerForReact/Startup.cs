@@ -73,6 +73,7 @@ namespace ServerForReact
 
             services.AddScoped<IJwtTokenService, JwtTokenServices>(); /*Св'язуєм так, щоб коли визивався інтерфейс, створювався клас*/
             services.AddScoped<IStudentService, StudentService>(); /*Св'язуєм так, щоб коли визивався інтерфейс, створювався клас*/
+            services.AddScoped<ICourseService, CourseService>(); /*Св'язуєм так, щоб коли визивався інтерфейс, створювався клас*/
             var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<String>("JwtKey")));
 
             services.AddAuthentication(options => /*Validation of our JWT Token. Configurate of our Token*/

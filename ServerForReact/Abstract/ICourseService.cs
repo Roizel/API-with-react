@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ServerForReact.Abstract
 {
-    public interface ICourseController
+    public interface ICourseService
     {
-        public Task CreateStudent(CreateCourseViewModel model);
+        public Task<string> CreateCourse(CreateCourseViewModel model);
+        public Task<string> DeleteCourse(int id);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
 using ServerForReact.Models;
 using System;
@@ -17,6 +18,8 @@ namespace ServerForReact.Mapper
               .ForMember(x => x.UserName, opt => opt.MapFrom(x => x.Name));
             CreateMap<AppUser, StudentViewModel>()
            .ForMember(x => x.Photo, opt => opt.MapFrom(x => "/images/" + x.Photo));
+            CreateMap<CreateCourseViewModel, Courses>()
+           .ForMember(x => x.PathImg, opt => opt.MapFrom(x => "/images/" + x.Photo));
         }
     }
 }

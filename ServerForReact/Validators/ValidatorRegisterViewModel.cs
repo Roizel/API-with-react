@@ -39,6 +39,15 @@ namespace ServerForReact.Validators
               .NotEmpty().WithName("ConfirmPassword").WithMessage("Поле є обов'язковим!")
                .Equal(x => x.Password).WithMessage("Поролі не співпадають!");
         }
+
+
+        //new Rule<string>(
+        //       x =>
+        //        Regex.IsMatch(x,
+        //                      @"(?:(?:(\s*\(?([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*)|([2-9]1[02-9]|[2‌​-9][02-8]1|[2-9][02-8][02-9]))\)?\s*(?:[.-]\s*)?)([2-9]1[02-9]|[2-9][02-9]1|[2-9]‌​[02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})"),
+        //        x => String.Format("{0} is not a valid phone number.", x));
+
+
         private bool BeUniqueEmail(string email)
         {
             return _userManager.FindByEmailAsync(email).Result == null;

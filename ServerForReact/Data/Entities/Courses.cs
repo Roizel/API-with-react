@@ -25,6 +25,6 @@ namespace ServerForReact.Data.Entities
         public string Duration { get; set; }
         [Required]
         public DateTime StartCourse { get; set; }
-        public virtual ICollection<AppUser> StudentId { get; set; }
+        public virtual ICollection<AppUser> Student { get; set; }
     }
 }
