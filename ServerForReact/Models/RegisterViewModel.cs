@@ -24,11 +24,11 @@ namespace ServerForReact.Models
         {
             Errors.Invalid.Add(message);
         }
-        public AccountErrorItem Errors { get; set; } = new AccountErrorItem(); /*exmp of AccountErrorItem */
+        public AccountErrorItem Errors { get; set; } = new AccountErrorItem();
     }
 
     public class AccountErrorItem
     {
-        public List<string> Invalid { get; set; } = new List<string>(); /*List of Errors*/
+        public List<string> Invalid { get; set; } = new List<string>();
     }
 }

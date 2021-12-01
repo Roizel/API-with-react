@@ -14,4 +14,18 @@ namespace ServerForReact.Models
         public string Duration { get; set; }
         public DateTime StartCourse { get; set; }
     }
+    public class CourseError /*Error*/
+    {
+        public CourseError() { }
+        public CourseError(string message)
+        {
+            Errors.Invalid.Add(message);
+        }
+        public CourseErrorItem Errors { get; set; } = new CourseErrorItem(); /*exmp of AccountErrorItem */
+    }
+
+    public class CourseErrorItem
+    {
+        public List<string> Invalid { get; set; } = new List<string>(); /*List of Errors*/
+    }
 }

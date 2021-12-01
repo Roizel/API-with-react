@@ -19,19 +19,19 @@ namespace ServerForReact.Services
     }
     public class JwtTokenServices : IJwtTokenService
     {
-        private readonly IConfiguration _configuration;
-        private readonly UserManager<AppUser> _userManager;
+        private readonly IConfiguration configuration;
+        private readonly UserManager<AppUser> userManager;
 
-        public JwtTokenServices(IConfiguration configuration,
-            UserManager<AppUser> userManager)
+        public JwtTokenServices(IConfiguration _configuration,
+            UserManager<AppUser> _userManager)
         {
-            _configuration = configuration;
-            _userManager = userManager;
+            configuration = _configuration;
+            userManager = _userManager;
         }
 
         public string CreateToken(AppUser user)
         {
-            var roles = _userManager.GetRolesAsync(user).Result; /*Get roles of user*/
+            var roles = userManager.GetRolesAsync(user).Result; /*Get roles of user*/
             List<Claim> claims = new List<Claim>()
             {
                 new Claim("name", user.UserName)
@@ -43,7 +43,7 @@ namespace ServerForReact.Services
             {
                 claims.Add(new Claim("roles", role));
             }
-            var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes/*From string in bytes*/(_configuration.GetValue<String>("JwtKey"))); /*Create Key(appsettings.json)*/
+            var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes/*From string in bytes*/(configuration.GetValue<String>("JwtKey"))); /*Create Key(appsettings.json)*/
             var signinCredentials = new SigningCredentials(signinKey, SecurityAlgorithms.HmacSha256); /*encryption key*/
 
             var jwt = new JwtSecurityToken( /*Create JWT Token and configurate it*/

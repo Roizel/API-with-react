@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Entities;
+using ServerForReact.Exceptions;
 using ServerForReact.Models;
 using System;
 using System.Collections.Generic;
@@ -13,71 +15,61 @@ namespace ServerForReact.Services
 {
     public class CourseService : ICourseService
     {
-        private readonly AppEFContext _context;
-        private readonly IMapper _mapper;
+        private readonly AppEFContext context;
+        private readonly IMapper mapper;
 
-        public CourseService(AppEFContext context, IMapper mapper)
+        public CourseService(AppEFContext _context, IMapper _mapper)
         {
-            _mapper = mapper;
-            _context = context;
+            mapper = _mapper;
+            context = _context;
         }
-        public async Task<string> CreateCourse(CreateCourseViewModel model)
-        {
-            try {
-                var course = _mapper.Map<Courses>(model); /*Map AppUser to model*/
-                string fileName = String.Empty;
-                if (model.Photo != null) /*Images*/
-                {
-                    string randomFilename = Path.GetRandomFileName() +
-                        Path.GetExtension(model.Photo.FileName);
 
-                    string dirPath = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                    fileName = Path.Combine(dirPath, randomFilename);
-                    using (var file = System.IO.File.Create(fileName))
-                    {
-                        model.Photo.CopyTo(file);
-                    }
-                    course.PathImg = randomFilename;
-                }
-                course.Name = model.Name;
-                course.StartCourse = model.StartCourse;
-                course.Description = model.Description;
-                course.Duration = model.Duration;
-                _context.Courses.Add(course); /*Create user*/
-                await _context.SaveChangesAsync();
-                return "Ok";
-            }
-            catch (Exception ex)
+        public async Task<Courses> CreateCourse(CreateCourseViewModel model)
+        {
+            var course = mapper.Map<Courses>(model);
+            string fileName = String.Empty;
+
+            if (model.Photo != null)
             {
-                return $"Something went wrong on server: {ex.Message}";
+                string randomFilename = Path.GetRandomFileName() +
+                    Path.GetExtension(model.Photo.FileName);
+
+                string dirPath = Path.Combine(Directory.GetCurrentDirectory(), "images");
+                fileName = Path.Combine(dirPath, randomFilename);
+                using (var file = System.IO.File.Create(fileName))
+                {
+                    model.Photo.CopyTo(file);
+                }
+                course.PathImg = randomFilename;
             }
+
+            course.Name = model.Name;
+            course.StartCourse = model.StartCourse;
+            course.Description = model.Description;
+            course.Duration = model.Duration;
+            context.Courses.Add(course);
+            await context.SaveChangesAsync();
+            return course;
         }
 
         public async Task<string> DeleteCourse(int id)
         {
-            try
+            var course = context.Courses.SingleOrDefault(x => x.Id == id);
+            if (course == null)
             {
-                var course = _context.Courses.SingleOrDefault(x => x.Id == id);
-                if (course == null)
-                    return "Course does not exist";    /*Bedrik*/
-                if (course.PathImg != null)
-                {
-                    var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                    var FilePath = Path.Combine(directory, course.PathImg);
-                    System.IO.File.Delete(FilePath);
-                }
-                _context.Courses.Remove(course);
-                await _context.SaveChangesAsync();
-                return $"Course '{course.Name}' was deleted successfully";
+                CourseError error = new CourseError();
+                error.Errors.Invalid.Add("This id does not exist");
+                throw new CourseException(error);
             }
-            //catch (AccountException aex) /*If Bad, send errors to Frontend*/
-            //{
-            //    return $"{aex.AccountError}";
-            //}
-            catch (Exception ex) /*For undefined exceptions*/
+            if (course.PathImg != null)
             {
-                return $"Something went wrong on server: {ex.Message}"; /*Send bedrik to frontend*/
+                var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
+                var FilePath = Path.Combine(directory, course.PathImg);
+                System.IO.File.Delete(FilePath);
             }
+            context.Courses.Remove(course);
+            await context.SaveChangesAsync();
+            return $"Course {course.Name}, Id: {course.Id} was deleted successfully";
         }
     }
 }

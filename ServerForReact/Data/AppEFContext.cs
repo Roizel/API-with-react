@@ -21,6 +21,7 @@ namespace ServerForReact.Data
 
         }
         public DbSet<Courses> Courses{ get; set; }
+        public DbSet<StudentCourses> StudentCourses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -39,6 +40,16 @@ namespace ServerForReact.Data
                     .WithMany(r => r.UserRoles)
                     .HasForeignKey(ur => ur.UserId)
                     .IsRequired();
+
+                builder.Entity<StudentCourses>().HasKey(table => new {
+                    table.StudentId,
+                    table.CourseId
+                });
+                //builder.Entity<StudentCourses>().Property(o => o.StudentId)
+                //    .HasColumnName("StudentId");
+
+                //builder.Entity<StudentCourses>().Property(o => o.CourseId)
+                //    .HasColumnName("CourseId");
             });
         }
 

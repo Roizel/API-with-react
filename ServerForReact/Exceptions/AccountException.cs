@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ServerForReact.Exceptions
 {
-    public class AccountException : Exception /*Create castom Exceptions for send errors to frontend*/
+    public class AccountException : Exception
     {
-        public AccountError AccountError { get; private set; } /*Create exmp of AccountError*/
+        public AccountError AccountError { get; private set; }
         public AccountException(AccountError accountError)
         {
             AccountError = accountError;

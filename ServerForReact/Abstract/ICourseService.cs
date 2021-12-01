@@ -1,4 +1,5 @@
-﻿using ServerForReact.Models;
+﻿using ServerForReact.Data.Entities;
+using ServerForReact.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace ServerForReact.Abstract
 {
     public interface ICourseService
     {
-        public Task<string> CreateCourse(CreateCourseViewModel model);
+        public Task<Courses> CreateCourse(CreateCourseViewModel model);
         public Task<string> DeleteCourse(int id);
     }
 }

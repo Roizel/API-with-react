@@ -17,9 +17,7 @@ namespace ServerForReact.Data.Identity
         public string Surname { get; set; }
         [Required]
         public int Age { get; set; }
-        [Required]
-        public DateTime JoinCourse { get; set; }
-        public virtual ICollection<Courses> Course { get; set; }
+        public virtual ICollection<StudentCourses> StudentCourses { get; set; }
         public virtual ICollection<AppUserRole> UserRoles { get; set; }
     }
 }

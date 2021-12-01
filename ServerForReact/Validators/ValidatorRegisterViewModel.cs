@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Identity;
+using ServerForReact.Abstract;
 using ServerForReact.Data.Identity;
 using ServerForReact.Models;
 using System;
@@ -11,46 +12,45 @@ namespace ServerForReact.Validators
 {
     public class ValidatorRegisterViewModel : AbstractValidator<RegisterViewModel>
     {
-        private readonly UserManager<AppUser> _userManager;
-        public ValidatorRegisterViewModel(UserManager<AppUser> userManager)
+        IStudentService studentService;
+        public ValidatorRegisterViewModel(IStudentService _studentService)
         {
-            _userManager = userManager;
+            studentService = _studentService;
             RuleFor(x => x.Email)
-              .NotEmpty().WithMessage("Поле пошта є обов'язковим!")
-              .EmailAddress().WithMessage("Пошта є не коректною!")
-              .DependentRules(() =>
-              {
-                  RuleFor(x => x.Email).Must(BeUniqueEmail).WithName("Email").WithMessage("Дана пошта уже зареєстрована!");
-              });
+                .NotEmpty().WithMessage("The Email field is required!")
+                .EmailAddress().WithMessage("Email is incorrect!")
+                .DependentRules(() =>
+                {
+                    RuleFor(x => x.Email).Must(studentService.IsEmailExist).WithName("Email").WithMessage("This mail is already registered!");
+                });
+
             RuleFor(x => x.Password)
-               .NotEmpty().WithName("Password").WithMessage("Поле пароль є обов'язковим!")
-               .MinimumLength(5).WithName("Password").WithMessage("Поле пароль має містити міннімум 5 символів!");
+                .NotEmpty().WithName("Password").WithMessage("The Password field is required!")
+                .MinimumLength(5).WithName("Password").WithMessage("The Password field must be at least 5 characters long!");
+
             RuleFor(x => x.Age)
-             .NotEmpty().WithMessage("Поле Age є обов'язковим!");
+                .NotEmpty().WithMessage("The Age field is required!")
+                .InclusiveBetween(14, 80).WithMessage("Registration is possible only from 14 to 80 years");
+
             RuleFor(x => x.Name)
-            .NotEmpty().WithMessage("Поле Name є обов'язковим!");
+                .NotEmpty().WithMessage("The Name field is required!")
+                .MaximumLength(30).WithMessage("Maximum number of characters - 30")
+                .MinimumLength(2).WithMessage("Minimum number of characters - 2");
+
             RuleFor(x => x.Surname)
-            .NotEmpty().WithMessage("Поле SurName є обов'язковим!");
+                .NotEmpty().WithMessage("The Surname field is required!")
+                .MaximumLength(30).WithMessage("Maximum number of characters - 30")
+                .MinimumLength(2).WithMessage("Minimum number of characters - 2");
+
             RuleFor(x => x.Phone)
-            .NotEmpty().WithMessage("Поле Phone є обов'язковим!");
+                .NotEmpty().WithMessage("The Phone field is required!");
+
             RuleFor(x => x.Photo)
-            .NotEmpty().WithMessage("Photo є обов'язковим!");
+                .NotEmpty().WithMessage("The Photo field is required!");
+
             RuleFor(x => x.ConfirmPassword)
-              .NotEmpty().WithName("ConfirmPassword").WithMessage("Поле є обов'язковим!")
-               .Equal(x => x.Password).WithMessage("Поролі не співпадають!");
-        }
-
-
-        //new Rule<string>(
-        //       x =>
-        //        Regex.IsMatch(x,
-        //                      @"(?:(?:(\s*\(?([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*)|([2-9]1[02-9]|[2‌​-9][02-8]1|[2-9][02-8][02-9]))\)?\s*(?:[.-]\s*)?)([2-9]1[02-9]|[2-9][02-9]1|[2-9]‌​[02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})"),
-        //        x => String.Format("{0} is not a valid phone number.", x));
-
-
-        private bool BeUniqueEmail(string email)
-        {
-            return _userManager.FindByEmailAsync(email).Result == null;
+                .NotEmpty().WithName("ConfirmPassword").WithMessage("The Password field is required!")
+                .Equal(x => x.Password).WithMessage("Passwords do not match!");
         }
     }
 }

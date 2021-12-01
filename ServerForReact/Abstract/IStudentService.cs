@@ -12,5 +12,7 @@ namespace ServerForReact.Abstract
         public Task<string> LoginStudent(LoginViewModel model);
         //public void UpdateStudent(RegisterViewModel model);
         public Task<string> DeleteStudent(int id);
+        public bool IsEmailExist(string email); /*Check email in Validator*/
+        public Task<bool> IsPasswordCorrect(LoginViewModel model); /*Check Password in Validator*/
     }
 }

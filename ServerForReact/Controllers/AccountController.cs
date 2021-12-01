@@ -20,84 +20,63 @@ namespace ServerForReact.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IStudentService studentService;
-        private readonly UserManager<AppUser> _userManager;
-        private readonly IJwtTokenService _tokenService;
-        private readonly IMapper _mapper;
-        public AccountController(IStudentService _studentService, UserManager<AppUser> userManager, IJwtTokenService tokenService, IMapper mapper)
+        private readonly UserManager<AppUser> userManager;
+        private readonly IJwtTokenService tokenService;
+        private readonly IMapper mapper;
+        public AccountController(IStudentService _studentService, UserManager<AppUser> _userManager, IJwtTokenService _tokenService, IMapper _mapper)
         {
-            _mapper = mapper;
+            mapper = _mapper;
             studentService = _studentService;
-            _userManager = userManager;
-            _tokenService = tokenService;
+            userManager = _userManager;
+            tokenService = _tokenService;
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromForm] RegisterViewModel model)
         {
-            try /*If Good, send OK to Frontend*/
-            {
-                string token = await studentService.CreateStudent(model); /*Create user*/
-                if (token == null)
-                    return BadRequest(); /*Bedrik*/
 
-                return Ok(new
-                {
-                    token /*All good*/
-                });
-            }
-            catch (AccountException aex) /*If Bad, send errors to Frontend*/
+            string token = await studentService.CreateStudent(model);
+            if (token == null)
             {
-
-                return BadRequest(aex.AccountError);
+                return BadRequest();
             }
-            catch (Exception ex) /*For undefined exceptions*/
+            return Ok(new
             {
-                return BadRequest(new AccountError("Something went wrong on server" + ex.Message)); /*Send bedrik to frontend*/
-            }
+                token
+            });
         }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
-            try /*If Good, send OK to Frontend*/
-            {
-                string token = await studentService.LoginStudent(model); /*Create user*/
-                if (token == null)
-                    return BadRequest(); /*Bedrik*/
-                return Ok(new
-                {
-                    token /*All good*/
-                });
-            }
-            catch (AccountException aex) /*If Bad, send errors to Frontend*/
-            {
-                return BadRequest(aex.AccountError);
-            }
-            catch (Exception ex) /*For undefined exceptions*/
-            {
-                return BadRequest(new AccountError("Something went wrong on server" + ex.Message)); /*Send bedrik to frontend*/
-            }
+            string token = await studentService.LoginStudent(model);
+            if (token == null)
+                return BadRequest();
+            return Ok(new { token });
         }
-        [Route("delete/{id}")] /*[HttpPost("register")] - хз чого, но так не робить, треба писати HttpPost i Route*/
+
+        [Route("delete/{id}")]
         [HttpDelete]
-        public async Task<string> DeleteStudent(int id)
+        public async Task<IActionResult> DeleteStudent(int id)
         {
             try
             {
                 string delete = await studentService.DeleteStudent(id);
-                return delete;
+                return Ok(new { delete });
             }
-            catch (Exception ex)
+            catch (AccountException aex)
             {
-                return $"Server erroe: {ex.Message}";
+                return BadRequest(aex.AccountError);
             }
         }
+
         [Route("allstudents")]
         [HttpGet]
         public IActionResult GetStudents()
         {
             Thread.Sleep(1000);
-            var list = _userManager.Users
-                .Select(x => _mapper.Map<StudentViewModel>(x))
+            var list = userManager.Users
+                .Select(x => mapper.Map<StudentViewModel>(x))
                 .ToList();
             return Ok(list);
         }

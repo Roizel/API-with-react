@@ -15,23 +15,24 @@ namespace ServerForReact.Services
 {
     public class StudentService : IStudentService
     {
-        private readonly UserManager<AppUser> _userManager;
-        private readonly IMapper _mapper;
-        private readonly IJwtTokenService _jwtTokenService;
-        private readonly AppEFContext _context;
-        public StudentService(UserManager<AppUser> userManager, IJwtTokenService jwtTokenService, SignInManager<AppUser> signInManager,
-            IMapper mapper, AppEFContext context)
+        private readonly UserManager<AppUser> userManager;
+        private readonly IMapper mapper;
+        private readonly IJwtTokenService jwtTokenService;
+        private readonly AppEFContext context;
+        public StudentService(UserManager<AppUser> _userManager, IJwtTokenService _jwtTokenService, SignInManager<AppUser> _signInManager,
+            IMapper _mapper, AppEFContext _context)
         {
-            _mapper = mapper;
-            _userManager = userManager;
-            _jwtTokenService = jwtTokenService;
-            _context = context;
+            mapper = _mapper;
+            userManager = _userManager;
+            jwtTokenService = _jwtTokenService;
+            context = _context;
         }
+
         public async Task<string> CreateStudent(RegisterViewModel model)
         {
-            var student = _mapper.Map<AppUser>(model); /*Map AppUser to model*/
+            var student = mapper.Map<AppUser>(model);
             string fileName = String.Empty;
-            if (model.Photo != null) /*Images*/
+            if (model.Photo != null)
             {
                 string randomFilename = Path.GetRandomFileName() +
                     Path.GetExtension(model.Photo.FileName);
@@ -44,77 +45,67 @@ namespace ServerForReact.Services
                 }
                 student.Photo = randomFilename;
             }
-            var result = await _userManager.CreateAsync(student, model.Password); /*Create user*/
+            var result = await userManager.CreateAsync(student, model.Password);
             if (!result.Succeeded)
             {
                 if (!string.IsNullOrEmpty(fileName))
                     System.IO.File.Delete(fileName);
-                AccountError accountError = new AccountError(); /*Create castom Exception*/
+                AccountError accountError = new AccountError();
                 foreach (var item in result.Errors)
                 {
-                    accountError.Errors.Invalid.Add(item.Description); /*Add Exceptions to our castom Exceptions*/
+                    accountError.Errors.Invalid.Add(item.Description);
                 }
-                throw new AccountException(accountError); /*Send errors to AccountController*/
+                throw new AccountException(accountError);
             }
-
-            return _jwtTokenService.CreateToken(student);
-
+            return jwtTokenService.CreateToken(student);
         }
 
         public async Task<string> DeleteStudent(int id)
         {
-            try
+
+            var student = userManager.Users.SingleOrDefault(x => x.Id == id);
+            if (student == null)
             {
-                var student = _userManager.Users.SingleOrDefault(x => x.Id == id);
-                if (student == null)
-                    return "Student does not exist";    /*Bedrik*/
-                if (student.Photo != null)
-                {
-                    var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                    var FilePath = Path.Combine(directory, student.Photo);
-                    System.IO.File.Delete(FilePath);
-                }
-                _context.Users.Remove(student);
-                await _context.SaveChangesAsync();
-                return $"Student {student.UserName} {student.Surname} was deleted successfully";
+                AccountError error = new AccountError();
+                error.Errors.Invalid.Add("This id does not exist");
+                throw new AccountException(error);
             }
-            catch (AccountException aex) /*If Bad, send errors to Frontend*/
+            if (student.Photo != null)
             {
-                return $"{aex.AccountError}";
+                var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
+                var FilePath = Path.Combine(directory, student.Photo);
+                System.IO.File.Delete(FilePath);
             }
-            catch (Exception ex) /*For undefined exceptions*/
+            context.Users.Remove(student);
+            await context.SaveChangesAsync();
+            return $"Student {student.UserName} {student.Surname} was deleted successfully";
+        }
+
+        public async Task<string> LoginStudent(LoginViewModel model)
+        {
+            var student = await userManager.FindByEmailAsync(model.Email);
+            var result = await userManager.CheckPasswordAsync(student, model.Password);
+            if (result == true)
             {
-                return $"Something went wrong on server: {ex.Message}"; /*Send bedrik to frontend*/
+                string token = jwtTokenService.CreateToken(student);
+                return token;
+            }
+            else
+            {
+                AccountError error = new AccountError();
+                error.Errors.Invalid.Add("The password is wrong!!!");
+                throw new AccountException(error);
             }
         }
 
-        public async Task<string> LoginStudent(LoginViewModel model) /*Під очень великім вопросом*/
+        public bool IsEmailExist(string email)
         {
-            try
-            {
-                var student = await _userManager.FindByEmailAsync(model.Email); /*І так ясно*/
-                if (student == null)
-                    return "Email does not exist";
-                if (await _userManager.CheckPasswordAsync(student, model.Password)) /*І так ясно*/
-                {
-                    string token = _jwtTokenService.CreateToken(student); /*Create token and send it to client*/
-                    return token;
-                }
-                else
-                {
-                    //var exc = new AccountError();
-                    //exc.Errors.Invalid.Add("Wrong password!");
-                    return "Wrong password";
-                }
-            }
-            catch (AccountException aex)
-            {
-                return $"Error: {aex.AccountError}";
-            }
-            catch (Exception ex)
-            {
-                return $"Something went wrong on server: {ex.Message}";
-            }
+            return userManager.FindByEmailAsync(email).Result != null;
+        }
+        public async Task<bool> IsPasswordCorrect(LoginViewModel model)
+        {
+            AppUser student = await userManager.FindByEmailAsync(model.Email);
+            return userManager.CheckPasswordAsync(student, model.Password).Result;
         }
     }
 }
