@@ -41,14 +41,14 @@ namespace ServerForReact
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             /*Write Connection to DB*/
             services.AddDbContext<AppEFContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddIdentity<AppUser, AppRole>(options =>
             {
                 options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 6;
+                options.Password.RequiredLength = 5;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
@@ -68,7 +68,6 @@ namespace ServerForReact
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ServerForReact", Version = "v1" });
             });
-            services.AddCors();
             services.AddAutoMapper(typeof(AppMapProfile)); /*Add AutoMapper*/
 
             services.AddScoped<IJwtTokenService, JwtTokenServices>(); /*Св'язуєм так, щоб коли визивався інтерфейс, створювався клас*/
@@ -96,8 +95,8 @@ namespace ServerForReact
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager)
         {
             app.UseCors(options =>
              options.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
@@ -106,6 +105,19 @@ namespace ServerForReact
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ServerForReact v1"));
+            }
+
+            if (roleManager.Roles.Count() == 0)
+            {
+                var result = roleManager.CreateAsync(new AppRole
+                {
+                    Name = "Admin"
+                }).Result;
+
+                result = roleManager.CreateAsync(new AppRole
+                {
+                    Name = "Student"
+                }).Result;
             }
 
             var dir = Path.Combine(Directory.GetCurrentDirectory(), "images");
@@ -118,14 +130,10 @@ namespace ServerForReact
                 FileProvider = new PhysicalFileProvider(dir),
                 RequestPath = "/images"
             });
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
-            app.UseAuthentication();    // подключение аутентификации
+            app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

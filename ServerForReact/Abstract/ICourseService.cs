@@ -11,5 +11,9 @@ namespace ServerForReact.Abstract
     {
         public Task<Courses> CreateCourse(CreateCourseViewModel model);
         public Task<string> DeleteCourse(int id);
+        public Task<Courses> UpdateCourse(SaveEditCourseViewModel model);
+        public Task<StudentCourses> Subscribe(SubscribeViewModel model);
+        public Task<StudentCourses> UnSubscribe(SubscribeViewModel model);
+
     }
 }

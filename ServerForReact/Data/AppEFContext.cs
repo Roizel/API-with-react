@@ -43,7 +43,8 @@ namespace ServerForReact.Data
 
                 builder.Entity<StudentCourses>().HasKey(table => new {
                     table.StudentId,
-                    table.CourseId
+                    table.CourseId,
+                    table.Id
                 });
                 //builder.Entity<StudentCourses>().Property(o => o.StudentId)
                 //    .HasColumnName("StudentId");

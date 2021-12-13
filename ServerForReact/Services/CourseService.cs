@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Entities;
+using ServerForReact.Data.Identity;
 using ServerForReact.Exceptions;
 using ServerForReact.Models;
 using System;
@@ -16,10 +19,12 @@ namespace ServerForReact.Services
     public class CourseService : ICourseService
     {
         private readonly AppEFContext context;
+        private readonly UserManager<AppUser> userManager;
         private readonly IMapper mapper;
 
-        public CourseService(AppEFContext _context, IMapper _mapper)
+        public CourseService(AppEFContext _context, IMapper _mapper, UserManager<AppUser> _userManager)
         {
+            userManager = _userManager;
             mapper = _mapper;
             context = _context;
         }
@@ -70,6 +75,98 @@ namespace ServerForReact.Services
             context.Courses.Remove(course);
             await context.SaveChangesAsync();
             return $"Course {course.Name}, Id: {course.Id} was deleted successfully";
+        }
+
+        public async Task<Courses> UpdateCourse(SaveEditCourseViewModel model)
+        {
+            var course = context.Courses
+                    .SingleOrDefault(x => x.Id == model.Id);
+            if (course != null)
+            {
+                course.Name = model.Name;
+                course.Description = model.Description;
+                course.Duration = model.Duration;
+                course.StartCourse = model.StartCourse;
+                string fileName = String.Empty;
+                if (model.Photo != null)
+                {
+                    if (course.PathImg != null)
+                    {
+                        var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
+                        var FilePath = Path.Combine(directory, course.PathImg);
+                        System.IO.File.Delete(FilePath);
+                    }
+                    if (model.Photo != null)
+                    {
+                        var ext = Path.GetExtension(model.Photo.FileName);
+                        fileName = Path.GetRandomFileName() + ext;
+                        var dir = Path.Combine(Directory.GetCurrentDirectory(), "images");
+                        var filePath = Path.Combine(dir, fileName);
+                        using (var stream = System.IO.File.Create(filePath))
+                        {
+                            model.Photo.CopyTo(stream);
+                        }
+                        course.PathImg = fileName;
+                    }
+                }
+                context.Entry(course).State = EntityState.Modified;
+                await context.SaveChangesAsync();
+                return course;
+            }
+            else
+            {
+                AccountError error = new AccountError();
+                error.Errors.Invalid.Add("Course does not exist");
+                throw new AccountException(error);
+            }
+        }
+        public async Task<StudentCourses> Subscribe(SubscribeViewModel model)
+        {
+            var student = await userManager.FindByNameAsync(model.Name);
+            var course = await context.Courses.SingleOrDefaultAsync(x => x.Id == model.CourseId);
+            if (student != null && course != null)
+            {
+                StudentCourses studentCourses = new StudentCourses();
+                studentCourses.CourseId = course.Id;
+                studentCourses.StudentId = student.Id;
+                studentCourses.JoinCourse = DateTime.Now;
+                context.StudentCourses.Add(studentCourses);
+                await context.SaveChangesAsync();
+                return studentCourses;
+            }
+            else
+            {
+                AccountError error = new AccountError();
+                error.Errors.Invalid.Add("Something went wrong");
+                throw new AccountException(error);
+            }
+        }
+        public async Task<StudentCourses> UnSubscribe(SubscribeViewModel model)
+        {
+            var student = await userManager.FindByNameAsync(model.Name);
+            var course = await context.Courses.SingleOrDefaultAsync(x => x.Id == model.CourseId);
+            if (student != null && course != null)
+            {
+                var find = await context.StudentCourses.SingleOrDefaultAsync(x => x.CourseId == model.CourseId && x.StudentId == student.Id);
+                if (find != null)
+                {
+                    context.StudentCourses.Remove(find);
+                    await context.SaveChangesAsync();
+                    return find;
+                }
+                else
+                {
+                    AccountError error = new AccountError();
+                    error.Errors.Invalid.Add("U don`t subs to this course");
+                    throw new AccountException(error);
+                }
+            }
+            else
+            {
+                AccountError error = new AccountError();
+                error.Errors.Invalid.Add("Something went wrong");
+                throw new AccountException(error);
+            }
         }
     }
 }

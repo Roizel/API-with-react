@@ -1,4 +1,5 @@
-﻿using ServerForReact.Models;
+﻿using ServerForReact.Data.Identity;
+using ServerForReact.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace ServerForReact.Abstract
     {
         public Task<string> CreateStudent(RegisterViewModel model);
         public Task<string> LoginStudent(LoginViewModel model);
-        //public void UpdateStudent(RegisterViewModel model);
+        //public Task<AppUser> UpdateStudent(SaveEditStudentViewModel model);
+        public Task<AppUser> UpdateStudent(SaveEditStudentViewModel model);
         public Task<string> DeleteStudent(int id);
-        public bool IsEmailExist(string email); /*Check email in Validator*/
+        public bool IsEmailExistRegister(string email);
+        public bool IsEmailExistLogin(string email);
         public Task<bool> IsPasswordCorrect(LoginViewModel model); /*Check Password in Validator*/
     }
 }

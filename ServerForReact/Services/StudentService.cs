@@ -84,21 +84,66 @@ namespace ServerForReact.Services
         public async Task<string> LoginStudent(LoginViewModel model)
         {
             var student = await userManager.FindByEmailAsync(model.Email);
-            var result = await userManager.CheckPasswordAsync(student, model.Password);
-            if (result == true)
+            bool IsAdmin = await userManager.IsInRoleAsync(student, "Admin");
+            if (student != null)
             {
                 string token = jwtTokenService.CreateToken(student);
                 return token;
             }
             else
             {
+                return null;
+            }
+        }
+        public async Task<AppUser> UpdateStudent(SaveEditStudentViewModel model)
+        {
+            var student = userManager.Users
+                    .SingleOrDefault(x => x.Id == model.Id);
+            if (student != null)
+            {
+                student.Email = model.Email;
+                student.UserName = model.Name;
+                student.Surname = model.Surname;
+                student.PhoneNumber = model.Phone;
+                student.Age = model.Age;
+                string fileName = String.Empty;
+                if (model.Photo != null)
+                {
+                    if (student.Photo != null)
+                    {
+                        var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
+                        var FilePath = Path.Combine(directory, student.Photo);
+                        System.IO.File.Delete(FilePath);
+                    }
+                    if (model.Photo != null)
+                    {
+                        var ext = Path.GetExtension(model.Photo.FileName);
+                        fileName = Path.GetRandomFileName() + ext;
+                        var dir = Path.Combine(Directory.GetCurrentDirectory(), "images");
+                        var filePath = Path.Combine(dir, fileName);
+                        using (var stream = System.IO.File.Create(filePath))
+                        {
+                            model.Photo.CopyTo(stream);
+                        }
+                        student.Photo = fileName;
+                    }
+                }
+                await userManager.UpdateAsync(student);
+                return student;
+            }
+            else
+            {
                 AccountError error = new AccountError();
-                error.Errors.Invalid.Add("The password is wrong!!!");
+                error.Errors.Invalid.Add("Student does not exist");
                 throw new AccountException(error);
             }
         }
 
-        public bool IsEmailExist(string email)
+        public bool IsEmailExistRegister(string email)
+        {
+            return userManager.FindByEmailAsync(email).Result == null;
+        }
+        public bool IsEmailExistLogin(string email)
         {
             return userManager.FindByEmailAsync(email).Result != null;
         }

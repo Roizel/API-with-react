@@ -21,7 +21,7 @@ namespace ServerForReact.Validators
                 .EmailAddress().WithMessage("Email is incorrect!")
                 .DependentRules(() =>
                 {
-                    RuleFor(x => x.Email).Must(studentService.IsEmailExist).WithName("Email").WithMessage("This Email does not exist!");
+                    RuleFor(x => x.Email).Must(studentService.IsEmailExistLogin).WithName("Email").WithMessage("This Email does not exist!");
                 });
 
             RuleFor(x => x.Password)

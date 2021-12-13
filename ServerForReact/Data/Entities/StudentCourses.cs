@@ -10,6 +10,8 @@ namespace ServerForReact.Data.Entities
 {
     public class StudentCourses
     {
+        [Key]
+        public int Id { get; set; }
         [Key, ForeignKey("Student"), Column(Order = 0)]
         public long StudentId { get; set; }
         [Key, ForeignKey("Course"), Column(Order = 1)]
@@ -17,6 +19,5 @@ namespace ServerForReact.Data.Entities
         public Courses Course { get; set; }
         public AppUser Student { get; set; }
         public DateTime JoinCourse { get; set; }
-
     }
 }

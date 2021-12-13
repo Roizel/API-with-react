@@ -37,7 +37,7 @@ namespace ServerForReact.Controllers
                 return BadRequest();
             }
 
-            return Ok(new
+            return Ok(new 
             {
                 result
             });
@@ -64,9 +64,73 @@ namespace ServerForReact.Controllers
         {
             Thread.Sleep(1000);
             var list = context.Courses
-                .Select(x => x)
+                .Select(x => mapper.Map<CourseItemViewModel>(x))
                 .ToList();
             return Ok(list);
+        }
+
+        [Route("editcourse/{id}")]
+        [HttpGet]
+        public IActionResult EditCourse(int id)
+        {
+            Thread.Sleep(1000);
+            var course = context.Courses
+                .SingleOrDefault(x => x.Id == id);
+            return Ok(mapper.Map<EditCourseViewModel>(course));
+        }
+
+        [HttpPut("savecourse")]
+        public IActionResult SaveEditedStudent([FromForm] SaveEditCourseViewModel model)
+        {
+            try
+            {
+                courseService.UpdateCourse(model);
+                return Ok();
+            }
+            catch (AccountException aex)
+            {
+                return BadRequest(aex.AccountError);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new AccountError("Щось пішло не так! " + ex.Message));
+            }
+        }
+
+        [HttpPost("subscribe")]
+        public IActionResult Subcribe([FromForm] SubscribeViewModel model)
+        {
+            try
+            {
+                courseService.Subscribe(model);
+                return Ok();
+            }
+            catch (AccountException aex)
+            {
+                return BadRequest(aex.AccountError);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new AccountError("Щось пішло не так! " + ex.Message));
+            }
+        }
+        [Route("unsubscribe")]
+        [HttpDelete]
+        public IActionResult UnSubcribe([FromForm] SubscribeViewModel model)
+        {
+            try
+            {
+                courseService.UnSubscribe(model);
+                return Ok();
+            }
+            catch (AccountException aex)
+            {
+                return BadRequest(aex.AccountError);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new AccountError("Щось пішло не так! " + ex.Message));
+            }
         }
     }
 }

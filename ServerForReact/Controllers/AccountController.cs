@@ -50,9 +50,13 @@ namespace ServerForReact.Controllers
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
             string token = await studentService.LoginStudent(model);
+            var student = await userManager.FindByEmailAsync(model.Email);
+            bool IsAdmin = await userManager.IsInRoleAsync(student, "Admin");
             if (token == null)
+            {
                 return BadRequest();
-            return Ok(new { token });
+            }
+            return Ok(new { token, IsAdmin});
         }
 
         [Route("delete/{id}")]
@@ -79,6 +83,33 @@ namespace ServerForReact.Controllers
                 .Select(x => mapper.Map<StudentViewModel>(x))
                 .ToList();
             return Ok(list);
+        }
+        [Route("editstudent/{id}")]
+        [HttpGet]
+        public IActionResult EditStudent(int id)
+        {
+            Thread.Sleep(1000);
+            var student = userManager.Users
+                .SingleOrDefault(x => x.Id == id);
+            return Ok(mapper.Map<EditStudentViewModel>(student));
+        }
+
+        [HttpPut("savestudent")]
+        public IActionResult SaveEditedStudent([FromForm]SaveEditStudentViewModel model)
+        {
+            try
+            {
+                studentService.UpdateStudent(model);
+                return Ok();
+            }
+            catch (AccountException aex)
+            {
+                return BadRequest(aex.AccountError);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new AccountError("Щось пішло не так! " + ex.Message));
+            }
         }
     }
 }
