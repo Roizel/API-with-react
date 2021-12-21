@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
+using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
 using ServerForReact.Exceptions;
 using ServerForReact.Models;
@@ -37,7 +38,7 @@ namespace ServerForReact.Controllers
                 return BadRequest();
             }
 
-            return Ok(new 
+            return Ok(new
             {
                 result
             });
@@ -47,15 +48,8 @@ namespace ServerForReact.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteCourse(int id)
         {
-            try
-            {
-                var delete = await courseService.DeleteCourse(id);
-                return Ok(new { delete });
-            }
-            catch (CourseException cex)
-            {
-                return BadRequest(cex.CourseError);
-            }
+            var delete = await courseService.DeleteCourse(id);
+            return Ok(new { delete });
         }
 
         [Route("allcourses")]
@@ -67,6 +61,17 @@ namespace ServerForReact.Controllers
                 .Select(x => mapper.Map<CourseItemViewModel>(x))
                 .ToList();
             return Ok(list);
+        }
+
+        [Route("studentscourses/{name}")]
+        [HttpGet]
+        public IActionResult GetCoursesStudent(string name)
+        {
+            Thread.Sleep(1000);
+            var student = context.Users.SingleOrDefault(x => x.UserName == name);
+            var list = context.StudentCourses.Select(x => mapper.Map<CourseStudentViewModel>(x)).ToList();
+            var list2 = list.Where(x => x.StudentId == student.Id);
+            return Ok(list2);
         }
 
         [Route("editcourse/{id}")]
@@ -82,55 +87,27 @@ namespace ServerForReact.Controllers
         [HttpPut("savecourse")]
         public IActionResult SaveEditedStudent([FromForm] SaveEditCourseViewModel model)
         {
-            try
-            {
-                courseService.UpdateCourse(model);
-                return Ok();
-            }
-            catch (AccountException aex)
-            {
-                return BadRequest(aex.AccountError);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new AccountError("Щось пішло не так! " + ex.Message));
-            }
+
+            courseService.UpdateCourse(model);
+            return Ok();
+
         }
 
         [HttpPost("subscribe")]
         public IActionResult Subcribe([FromForm] SubscribeViewModel model)
         {
-            try
-            {
-                courseService.Subscribe(model);
-                return Ok();
-            }
-            catch (AccountException aex)
-            {
-                return BadRequest(aex.AccountError);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new AccountError("Щось пішло не так! " + ex.Message));
-            }
+
+            courseService.Subscribe(model);
+            return Ok();
+
         }
-        [Route("unsubscribe")]
-        [HttpDelete]
+        [HttpPost("unsubscribe")]
         public IActionResult UnSubcribe([FromForm] SubscribeViewModel model)
         {
-            try
-            {
-                courseService.UnSubscribe(model);
-                return Ok();
-            }
-            catch (AccountException aex)
-            {
-                return BadRequest(aex.AccountError);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new AccountError("Щось пішло не так! " + ex.Message));
-            }
+
+            courseService.UnSubscribe(model);
+            return Ok();
+
         }
     }
 }

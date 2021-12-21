@@ -46,6 +46,7 @@ namespace ServerForReact.Data
                     table.CourseId,
                     table.Id
                 });
+
                 //builder.Entity<StudentCourses>().Property(o => o.StudentId)
                 //    .HasColumnName("StudentId");
 

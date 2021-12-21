@@ -17,25 +17,35 @@ namespace ServerForReact.Mapper
                 .ForMember(x => x.Photo, opt => opt.Ignore())
                 .ForMember(x => x.UserName, opt => opt.MapFrom(x => x.Name))
                 .ForMember(x => x.PhoneNumber, opt => opt.MapFrom(x => x.Phone));
+
             CreateMap<AppUser, StudentViewModel>()
                 .ForMember(x => x.Photo, opt => opt.MapFrom(x => x.Photo))
                 .ForMember(x => x.Phone, opt => opt.MapFrom(x => x.PhoneNumber))
                 .ForMember(x=>x.Name, opt => opt.MapFrom(x=>x.UserName));
+
             CreateMap<CreateCourseViewModel, Courses>()
                 .ForMember(x => x.PathImg, opt => opt.MapFrom(x => "/images/" + x.Photo));
+
             CreateMap<Courses, CourseItemViewModel>()
                 .ForMember(x => x.Photo, opt => opt.MapFrom(x => "/images/" + x.PathImg));
+
             CreateMap<AppUser, EditStudentViewModel>()
                 .ForMember(x => x.Photo, opt => opt.MapFrom(x => "/images/" + x.Photo))
                 .ForMember(x => x.Phone, opt => opt.MapFrom(x => x.PhoneNumber))
                 .ForMember(x => x.Name, opt => opt.MapFrom(x => x.UserName));
+
             CreateMap<SaveEditStudentViewModel, AppUser>()
                .ForMember(x => x.Photo, opt => opt.Ignore())
                .ForMember(x => x.UserName, opt => opt.MapFrom(x => x.Name))
                .ForMember(x => x.PhoneNumber, opt => opt.MapFrom(x => x.Phone));
             CreateMap<Courses, EditCourseViewModel>()
               .ForMember(x => x.Photo, opt => opt.MapFrom(x => "/images/" + x.PathImg));
-              //.ForMember(x => x.StartCourse, opt => opt.MapFrom(x => x.StartCourse));
+
+            CreateMap<StudentCourses, CourseStudentViewModel>()
+              .ForMember(x => x.CourseId, opt => opt.MapFrom(x => x.CourseId))
+              .ForMember(x => x.StudentId, opt => opt.MapFrom(x => x.StudentId))
+              .ForMember(x => x.JoinCourse, opt => opt.MapFrom(x => x.JoinCourse));
+
         }
     }
 }

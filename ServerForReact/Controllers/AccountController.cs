@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using ServerForReact.Abstract;
 using ServerForReact.Data.Identity;
 using ServerForReact.Exceptions;
+using ServerForReact.Logger.Contracts;
 using ServerForReact.Models;
 using ServerForReact.Services;
 using System;
@@ -23,12 +25,15 @@ namespace ServerForReact.Controllers
         private readonly UserManager<AppUser> userManager;
         private readonly IJwtTokenService tokenService;
         private readonly IMapper mapper;
-        public AccountController(IStudentService _studentService, UserManager<AppUser> _userManager, IJwtTokenService _tokenService, IMapper _mapper)
+        private readonly ILoggerManager logger;
+        public AccountController(IStudentService _studentService, ILoggerManager _logger, UserManager<AppUser> _userManager,
+            IJwtTokenService _tokenService, IMapper _mapper)
         {
             mapper = _mapper;
             studentService = _studentService;
             userManager = _userManager;
             tokenService = _tokenService;
+            logger = _logger;
         }
 
         [HttpPost("register")]
@@ -56,22 +61,15 @@ namespace ServerForReact.Controllers
             {
                 return BadRequest();
             }
-            return Ok(new { token, IsAdmin});
+            return Ok(new { token, IsAdmin });
         }
 
         [Route("delete/{id}")]
         [HttpDelete]
         public async Task<IActionResult> DeleteStudent(int id)
         {
-            try
-            {
-                string delete = await studentService.DeleteStudent(id);
-                return Ok(new { delete });
-            }
-            catch (AccountException aex)
-            {
-                return BadRequest(aex.AccountError);
-            }
+            string delete = await studentService.DeleteStudent(id);
+            return Ok(new { delete });
         }
 
         [Route("allstudents")]
@@ -82,6 +80,7 @@ namespace ServerForReact.Controllers
             var list = userManager.Users
                 .Select(x => mapper.Map<StudentViewModel>(x))
                 .ToList();
+            throw new Exception("...");
             return Ok(list);
         }
         [Route("editstudent/{id}")]
@@ -95,21 +94,10 @@ namespace ServerForReact.Controllers
         }
 
         [HttpPut("savestudent")]
-        public IActionResult SaveEditedStudent([FromForm]SaveEditStudentViewModel model)
+        public IActionResult SaveEditedStudent([FromForm] SaveEditStudentViewModel model)
         {
-            try
-            {
-                studentService.UpdateStudent(model);
-                return Ok();
-            }
-            catch (AccountException aex)
-            {
-                return BadRequest(aex.AccountError);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new AccountError("Щось пішло не так! " + ex.Message));
-            }
+            studentService.UpdateStudent(model);
+            return Ok();
         }
     }
 }

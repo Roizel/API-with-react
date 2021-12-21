@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1g2iCr//A3Klhrwb21GP9p9LCn2HOgb7PhnI2BRnhEkH9pQXdOqWy9oYDpEpj2E9wGR8N9xbecUUbvjCDEewDw==",
+  "dgSpecHash": "b7SUvFRJMRFyH70PjcJUGWsEBhfwDSwgswWSIhpMF3eNCvKAIgLpkjnIYU8Xc0YmNkPvDZ+MJLxjcylQWLHndw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sasha\\source\\repos\\ServerForReact\\ServerForReact\\ServerForReact.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,8 @@
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.win32.registry\\4.4.0\\microsoft.win32.registry.4.4.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\nlog.extensions.logging\\1.7.4\\nlog.extensions.logging.1.7.4.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

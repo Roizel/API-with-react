@@ -2,9 +2,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,9 +13,13 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using NLog;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Identity;
+using ServerForReact.Extensions;
+using ServerForReact.Logger;
+using ServerForReact.Logger.Contracts;
 using ServerForReact.Mapper;
 using ServerForReact.Services;
 using System;
@@ -33,16 +35,15 @@ namespace ServerForReact
     {
         public Startup(IConfiguration configuration)
         {
+            LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            /*Write Connection to DB*/
             services.AddDbContext<AppEFContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<AppUser, AppRole>(options =>
@@ -56,7 +57,7 @@ namespace ServerForReact
                .AddEntityFrameworkStores<AppEFContext>()
                .AddDefaultTokenProviders();
             services.AddFluentValidation(x =>
-              x.RegisterValidatorsFromAssemblyContaining<Startup>()); /*For Validation*/
+              x.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddControllers()
                 .AddNewtonsoftJson(options => /*Send data to fronetend with Camelcase(Email = email, Loh = loh etc.)*/
                 {
@@ -68,14 +69,15 @@ namespace ServerForReact
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ServerForReact", Version = "v1" });
             });
-            services.AddAutoMapper(typeof(AppMapProfile)); /*Add AutoMapper*/
+            services.AddAutoMapper(typeof(AppMapProfile));
 
-            services.AddScoped<IJwtTokenService, JwtTokenServices>(); /*Св'язуєм так, щоб коли визивався інтерфейс, створювався клас*/
-            services.AddScoped<IStudentService, StudentService>(); /*Св'язуєм так, щоб коли визивався інтерфейс, створювався клас*/
-            services.AddScoped<ICourseService, CourseService>(); /*Св'язуєм так, щоб коли визивався інтерфейс, створювався клас*/
+            services.AddScoped<IJwtTokenService, JwtTokenServices>();
+            services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<ICourseService, CourseService>();
+            services.AddSingleton<ILoggerManager, LoggerManager>();
             var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<String>("JwtKey")));
 
-            services.AddAuthentication(options => /*Validation of our JWT Token. Configurate of our Token*/
+            services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -85,7 +87,7 @@ namespace ServerForReact
                 cfg.SaveToken = true;
                 cfg.TokenValidationParameters = new TokenValidationParameters()
                 {
-                    IssuerSigningKey = signinKey, /*Check our Key if key was gived ASP, if no - abort*/
+                    IssuerSigningKey = signinKey,
                     ValidateAudience = false,
                     ValidateIssuer = false,
                     ValidateLifetime = true,
@@ -96,7 +98,7 @@ namespace ServerForReact
         }
 
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager, ILoggerManager logger)
         {
             app.UseCors(options =>
              options.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
@@ -106,7 +108,6 @@ namespace ServerForReact
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ServerForReact v1"));
             }
-
             if (roleManager.Roles.Count() == 0)
             {
                 var result = roleManager.CreateAsync(new AppRole
@@ -120,6 +121,9 @@ namespace ServerForReact
                 }).Result;
             }
 
+            //app.ConfigureExceptionhandler(logger);
+            app.ConfigureCustomExceptionMiddleware();
+
             var dir = Path.Combine(Directory.GetCurrentDirectory(), "images");
             if (!Directory.Exists(dir))
             {
@@ -130,10 +134,15 @@ namespace ServerForReact
                 FileProvider = new PhysicalFileProvider(dir),
                 RequestPath = "/images"
             });
+
             app.UseHttpsRedirection();
+
             app.UseRouting();
+
             app.UseAuthentication();
+
             app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
