@@ -99,3 +99,6 @@ C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\Fluen
 C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.dll
 C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\MailKit.dll
+C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\MimeKit.dll
+C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\BouncyCastle.Crypto.dll

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
@@ -19,13 +20,15 @@ namespace ServerForReact.Services
         private readonly IMapper mapper;
         private readonly IJwtTokenService jwtTokenService;
         private readonly AppEFContext context;
+        private readonly IEmailService emailService;
         public StudentService(UserManager<AppUser> _userManager, IJwtTokenService _jwtTokenService, SignInManager<AppUser> _signInManager,
-            IMapper _mapper, AppEFContext _context)
+            IMapper _mapper, AppEFContext _context, IEmailService _emailService)
         {
             mapper = _mapper;
             userManager = _userManager;
             jwtTokenService = _jwtTokenService;
             context = _context;
+            emailService = _emailService;
         }
 
         public async Task<string> CreateStudent(RegisterViewModel model)
@@ -45,6 +48,7 @@ namespace ServerForReact.Services
                 }
                 student.Photo = randomFilename;
             }
+
             var result = await userManager.CreateAsync(student, model.Password);
             if (!result.Succeeded)
             {

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -45,10 +46,46 @@ namespace ServerForReact.Controllers
             {
                 return BadRequest();
             }
-            return Ok(new
+            else
             {
-                token
-            });
+                var student = await userManager.FindByEmailAsync(model.Email);
+                if (student != null)
+                {
+                    var code = await userManager.GenerateEmailConfirmationTokenAsync(student);
+                    var callbackUrl = Url.Action(
+                        "ConfirmEmail",
+                        "Account",
+                        new { userId = student.Id, code = code },
+                        protocol: HttpContext.Request.Scheme);
+                    EmailService emailService = new EmailService();
+                    await emailService.SendEmailAsync(model.Email, "Confirm your account",
+                        $"Подтвердите регистрацию, перейдя по ссылке: <a href='{callbackUrl}'>link</a>");
+                }
+                return Ok(new
+                {
+                    token
+                });
+            }
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ConfirmEmail(string userId, string code)
+        {
+            if (userId == null || code == null)
+            {
+                return BadRequest("Error");
+            }
+            var user = await userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return BadRequest("Error");
+            }
+            var result = await userManager.ConfirmEmailAsync(user, code);
+            if (result.Succeeded)
+                return Ok("Ne Error");
+            else
+                return BadRequest("Error");
         }
 
         [HttpPost("login")]
@@ -80,7 +117,6 @@ namespace ServerForReact.Controllers
             var list = userManager.Users
                 .Select(x => mapper.Map<StudentViewModel>(x))
                 .ToList();
-            throw new Exception("...");
             return Ok(list);
         }
         [Route("editstudent/{id}")]

@@ -74,6 +74,7 @@ namespace ServerForReact
             services.AddScoped<IJwtTokenService, JwtTokenServices>();
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ICourseService, CourseService>();
+            services.AddScoped<IEmailService, EmailService>();
             services.AddSingleton<ILoggerManager, LoggerManager>();
             var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<String>("JwtKey")));
 
@@ -98,7 +99,7 @@ namespace ServerForReact
         }
 
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager, ILoggerManager logger)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager)
         {
             app.UseCors(options =>
              options.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
