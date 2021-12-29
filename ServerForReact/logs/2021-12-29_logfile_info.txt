@@ -1,0 +1,19 @@
+2021-12-29 16:39:40.6550|0|DEBUG|ServerForReact.Program|init main 
+2021-12-29 16:39:41.8098|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-29 16:39:41.8098|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-29 16:39:41.8098|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2021-12-29 16:40:40.0499|0|DEBUG|ServerForReact.Program|init main 
+2021-12-29 16:40:41.2067|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-29 16:40:41.2067|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-29 16:40:41.2147|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2021-12-29 16:40:53.7432|0|DEBUG|ServerForReact.Program|init main 
+2021-12-29 16:40:54.8328|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-29 16:40:54.8328|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-29 16:40:54.8412|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2021-12-29 16:54:58.0774|0|DEBUG|ServerForReact.Program|init main 
+2021-12-29 16:55:00.1036|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-29 16:55:00.1085|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-29 16:55:00.1085|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2021-12-29 16:56:22.5417|0|INFO|ServerForReact.Services.StudentService|Student Sasha Pradishchuk was created 
+2021-12-29 16:57:36.2998|0|INFO|ServerForReact.Controllers.AccountController|Email was send: sashapradishuk99@gmail.com 
+2021-12-29 16:57:53.4472|0|INFO|ServerForReact.Controllers.AccountController|Student Sasha Pradishchuk, sashapradishuk99@gmail.com confirmed account 

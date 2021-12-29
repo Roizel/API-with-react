@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
-using ServerForReact.Logger.Contracts;
+using Microsoft.Extensions.Logging;
+using NLog;
 using ServerForReact.Models.ErrorDetails;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,8 @@ namespace ServerForReact.CustomExceptionMiddleware
     public class ExceptionMiddleware
     {
         private readonly RequestDelegate next;
-        private readonly ILoggerManager logger;
-        public ExceptionMiddleware(RequestDelegate _next, ILoggerManager _logger)
+        private readonly ILogger<ExceptionMiddleware> logger;
+        public ExceptionMiddleware(RequestDelegate _next, ILogger<ExceptionMiddleware> _logger)
         {
             next = _next;
             logger = _logger;
@@ -27,7 +28,7 @@ namespace ServerForReact.CustomExceptionMiddleware
             }
             catch (Exception ex)
             {
-                logger.LogError($"Something went wrong: {ex}");
+                logger.LogError(ex.Message, "Smth went wrong");
                 await HandleExceptionAsync(httpContext);
             }
         }

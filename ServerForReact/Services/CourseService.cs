@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using NLog;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Entities;
@@ -21,12 +23,13 @@ namespace ServerForReact.Services
         private readonly AppEFContext context;
         private readonly UserManager<AppUser> userManager;
         private readonly IMapper mapper;
-
-        public CourseService(AppEFContext _context, IMapper _mapper, UserManager<AppUser> _userManager)
+        private readonly ILogger<CourseService> logger;
+        public CourseService(AppEFContext _context, IMapper _mapper, UserManager<AppUser> _userManager, ILogger<CourseService> _logger)
         {
             userManager = _userManager;
             mapper = _mapper;
             context = _context;
+            logger = _logger;
         }
 
         public async Task<Courses> CreateCourse(CreateCourseViewModel model)
@@ -52,6 +55,7 @@ namespace ServerForReact.Services
             course.StartCourse = model.StartCourse;
             course.Description = model.Description;
             course.Duration = model.Duration;
+            logger.LogInformation($"Course {course.Name} was created");
             context.Courses.Add(course);
             await context.SaveChangesAsync();
             return course;
@@ -74,6 +78,7 @@ namespace ServerForReact.Services
             }
             context.Courses.Remove(course);
             await context.SaveChangesAsync();
+            logger.LogInformation($"Course {course.Name}, Id: {course.Id} was deleted successfully");
             return $"Course {course.Name}, Id: {course.Id} was deleted successfully";
         }
 
@@ -83,6 +88,7 @@ namespace ServerForReact.Services
                     .SingleOrDefault(x => x.Id == model.Id);
             if (course != null)
             {
+                logger.LogInformation($"Id: {course.Id}, Course {course.Name} is updating");
                 course.Name = model.Name;
                 course.Description = model.Description;
                 course.Duration = model.Duration;
@@ -110,6 +116,7 @@ namespace ServerForReact.Services
                     }
                 }
                 context.Entry(course).State = EntityState.Modified;
+                logger.LogInformation($"Id: {course.Id}, was updated to {course.Name}");
                 await context.SaveChangesAsync();
                 return course;
             }
@@ -132,6 +139,7 @@ namespace ServerForReact.Services
                 studentCourses.JoinCourse = DateTime.Now;
                 context.StudentCourses.Add(studentCourses);
                 await context.SaveChangesAsync();
+                logger.LogInformation($"Student {student.Id}, {student.UserName} {student.Surname} was subscribed on course: {course.Id}, {course.Name}");
                 return studentCourses;
             }
             else
@@ -152,6 +160,7 @@ namespace ServerForReact.Services
                 {
                     context.StudentCourses.Remove(find);
                     await context.SaveChangesAsync();
+                    logger.LogInformation($"Student {student.Id}, {student.UserName} {student.Surname} was Unsubscribed from course course: {course.Id}, {course.Name}");
                     return find;
                 }
                 else

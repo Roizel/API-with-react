@@ -1,0 +1,4 @@
+2021-12-28 15:01:37.7617 INFO Student Sasha Pradischuk was created
+2021-12-28 15:02:30.7095 INFO Student Sasha Pradishchuk was created
+2021-12-28 15:08:13.1574 INFO Email was send: sashapradishuk99@gmail.com
+2021-12-28 15:13:08.8023 INFO Student Sasha Pradishchuk, sashapradishuk99@gmail.com confirmed account

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
+using NLog;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Identity;
@@ -21,17 +23,19 @@ namespace ServerForReact.Services
         private readonly IJwtTokenService jwtTokenService;
         private readonly AppEFContext context;
         private readonly IEmailService emailService;
+        private readonly ILogger<StudentService> logger;
         public StudentService(UserManager<AppUser> _userManager, IJwtTokenService _jwtTokenService, SignInManager<AppUser> _signInManager,
-            IMapper _mapper, AppEFContext _context, IEmailService _emailService)
+            IMapper _mapper, AppEFContext _context, IEmailService _emailService, ILogger<StudentService> _logger)
         {
             mapper = _mapper;
             userManager = _userManager;
             jwtTokenService = _jwtTokenService;
             context = _context;
             emailService = _emailService;
+            logger = _logger;
         }
 
-        public async Task<string> CreateStudent(RegisterViewModel model)
+        public async Task<(string token, AppUser student)> CreateStudent(RegisterViewModel model)
         {
             var student = mapper.Map<AppUser>(model);
             string fileName = String.Empty;
@@ -61,7 +65,10 @@ namespace ServerForReact.Services
                 }
                 throw new AccountException(accountError);
             }
-            return jwtTokenService.CreateToken(student);
+            logger.LogInformation($"Student {model.Name} {model.Surname} was created");
+            string token = jwtTokenService.CreateToken(student);
+            var kortesh = (token: token, student: student);
+            return kortesh;
         }
 
         public async Task<string> DeleteStudent(int id)
@@ -85,20 +92,24 @@ namespace ServerForReact.Services
             return $"Student {student.UserName} {student.Surname} was deleted successfully";
         }
 
-        public async Task<string> LoginStudent(LoginViewModel model)
+        public async Task<(bool IsAdmin, string token)> LoginStudent(LoginViewModel model)
         {
+            logger.LogInformation($"Robe na loginci");
             var student = await userManager.FindByEmailAsync(model.Email);
             bool IsAdmin = await userManager.IsInRoleAsync(student, "Admin");
             if (student != null)
             {
                 string token = jwtTokenService.CreateToken(student);
-                return token;
+                var result = (IsAdmin: IsAdmin, token: token);
+                return result;
             }
             else
             {
-                return null;
+                var error = (IsAdmin: false, token: "");
+                return error;
             }
         }
+
         public async Task<AppUser> UpdateStudent(SaveEditStudentViewModel model)
         {
             var student = userManager.Users
@@ -133,6 +144,7 @@ namespace ServerForReact.Services
                     }
                 }
                 await userManager.UpdateAsync(student);
+                logger.LogInformation($"Student {student.Id},  was updated to: {student.UserName} {student.Surname}");
                 return student;
             }
             else

@@ -102,3 +102,5 @@ C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.
 C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\MailKit.dll
 C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\MimeKit.dll
 C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\nlog.config

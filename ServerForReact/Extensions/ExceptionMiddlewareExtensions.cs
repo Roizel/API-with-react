@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using NLog;
 using ServerForReact.CustomExceptionMiddleware;
-using ServerForReact.Logger.Contracts;
 using ServerForReact.Models.ErrorDetails;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,8 @@ namespace ServerForReact.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
-        public static void ConfigureExceptionhandler(this IApplicationBuilder app, ILoggerManager logger)
+        private static ILogger logger = LogManager.GetCurrentClassLogger();
+        public static void ConfigureExceptionhandler(this IApplicationBuilder app)
         {
             app.UseExceptionHandler(appError =>
                 {
@@ -26,7 +27,7 @@ namespace ServerForReact.Extensions
                         var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                         if (contextFeature != null)
                         {
-                            logger.LogError($"Smth went wrong: {contextFeature.Error}");
+                            logger.Error($"Smth went wrong: {contextFeature.Error}");
 
                             await context.Response.WriteAsync(new ErrorDetails
                             {

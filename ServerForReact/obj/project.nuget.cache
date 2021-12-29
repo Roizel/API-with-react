@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AnZBtubhCJEvqhrRmFouEXgCH4/TkqKTjA9XWVG9D5GM+ZdWljoNIYnKxrPlj7XMPTr1NAa5HZt0qkm18L2KQA==",
+  "dgSpecHash": "SImYA1gqr8XSIeioYCuGHlC6bgrq7YwKVGx8QYUgusruQc8+CihNsmHFRqQ1Xd3pzWlVobjjHvIsAL/gRezeNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sasha\\source\\repos\\ServerForReact\\ServerForReact\\ServerForReact.csproj",
   "expectedPackageFiles": [
@@ -56,8 +56,9 @@
     "C:\\Users\\sasha\\.nuget\\packages\\mimekit\\3.0.0\\mimekit.3.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
-    "C:\\Users\\sasha\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\nlog\\4.7.13\\nlog.4.7.13.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\nlog.extensions.logging\\1.7.4\\nlog.extensions.logging.1.7.4.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\nlog.web.aspnetcore\\4.14.0\\nlog.web.aspnetcore.4.14.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

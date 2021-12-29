@@ -9,9 +9,8 @@ namespace ServerForReact.Abstract
 {
     public interface IStudentService
     {
-        public Task<string> CreateStudent(RegisterViewModel model);
-        public Task<string> LoginStudent(LoginViewModel model);
-        //public Task<AppUser> UpdateStudent(SaveEditStudentViewModel model);
+        public Task<(string token, AppUser student)> CreateStudent(RegisterViewModel model);
+        public Task<(bool IsAdmin, string token)> LoginStudent(LoginViewModel model);
         public Task<AppUser> UpdateStudent(SaveEditStudentViewModel model);
         public Task<string> DeleteStudent(int id);
         public bool IsEmailExistRegister(string email);

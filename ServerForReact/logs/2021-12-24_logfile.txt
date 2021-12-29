@@ -1,0 +1,4 @@
+2021-12-24 15:06:37.2521 INFO Robe norm i tak
+2021-12-24 15:31:53.1896 INFO Student Sasha Pradischuk was created
+2021-12-24 15:31:55.3415 INFO Email was send: sashapradishuk99@gmail.com
+2021-12-24 15:32:36.5237 INFO Student Sasha Pradischuk confirmed account

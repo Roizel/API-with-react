@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NLog;
 using ServerForReact.Abstract;
 using ServerForReact.Data.Identity;
-using ServerForReact.Exceptions;
-using ServerForReact.Logger.Contracts;
 using ServerForReact.Models;
 using ServerForReact.Services;
 using System;
@@ -26,44 +25,49 @@ namespace ServerForReact.Controllers
         private readonly UserManager<AppUser> userManager;
         private readonly IJwtTokenService tokenService;
         private readonly IMapper mapper;
-        private readonly ILoggerManager logger;
-        public AccountController(IStudentService _studentService, ILoggerManager _logger, UserManager<AppUser> _userManager,
-            IJwtTokenService _tokenService, IMapper _mapper)
+        private readonly ILogger<AccountController> logger;
+        private readonly IEmailService emailService;
+        public AccountController(IStudentService _studentService, UserManager<AppUser> _userManager,
+            IJwtTokenService _tokenService, IMapper _mapper, ILogger<AccountController> _logger, IEmailService _emailService)
         {
             mapper = _mapper;
             studentService = _studentService;
             userManager = _userManager;
             tokenService = _tokenService;
             logger = _logger;
+            emailService = _emailService;
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromForm] RegisterViewModel model)
         {
 
-            string token = await studentService.CreateStudent(model);
-            if (token == null)
+            var result = await studentService.CreateStudent(model);
+
+            if (result.token == null)
             {
                 return BadRequest();
             }
             else
             {
-                var student = await userManager.FindByEmailAsync(model.Email);
-                if (student != null)
+                if (result.student != null)
                 {
-                    var code = await userManager.GenerateEmailConfirmationTokenAsync(student);
-                    var callbackUrl = Url.Action(
-                        "ConfirmEmail",
-                        "Account",
-                        new { userId = student.Id, code = code },
-                        protocol: HttpContext.Request.Scheme);
-                    EmailService emailService = new EmailService();
-                    await emailService.SendEmailAsync(model.Email, "Confirm your account",
-                        $"Подтвердите регистрацию, перейдя по ссылке: <a href='{callbackUrl}'>link</a>");
+                    var code = await userManager.GenerateEmailConfirmationTokenAsync(result.student);
+                    var callbackUrl = Url.Action("ConfirmEmail",
+                                                 "Account",
+                                                 new { userId = result.student.Id, code = code },
+                                                 protocol: HttpContext.Request.Scheme);
+
+                    await emailService.SendEmailAsync(
+                                                     model.Email, 
+                                                     "Confirm your account",
+                                                     $"Confirm registration, go to link: <a href='{callbackUrl}'>link</a>");
+
+                    logger.LogInformation($"Email was send: {model.Email}");
                 }
                 return Ok(new
                 {
-                    token
+                    result.token
                 });
             }
         }
@@ -74,31 +78,34 @@ namespace ServerForReact.Controllers
         {
             if (userId == null || code == null)
             {
-                return BadRequest("Error");
+                return BadRequest();
             }
+
             var user = await userManager.FindByIdAsync(userId);
             if (user == null)
             {
-                return BadRequest("Error");
+                return BadRequest();
             }
+
             var result = await userManager.ConfirmEmailAsync(user, code);
             if (result.Succeeded)
-                return Ok("Ne Error");
-            else
-                return BadRequest("Error");
+            {
+                logger.LogInformation($"Student {user.UserName} {user.Surname}, {user.Email} confirmed account");
+                return Ok();
+            }
+            return BadRequest();
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
-            string token = await studentService.LoginStudent(model);
-            var student = await userManager.FindByEmailAsync(model.Email);
-            bool IsAdmin = await userManager.IsInRoleAsync(student, "Admin");
-            if (token == null)
+            var result = await studentService.LoginStudent(model);
+            if (result.token == "")
             {
                 return BadRequest();
             }
-            return Ok(new { token, IsAdmin });
+            logger.LogInformation($"Robe");
+            return Ok(new { result.token, result.IsAdmin });
         }
 
         [Route("delete/{id}")]

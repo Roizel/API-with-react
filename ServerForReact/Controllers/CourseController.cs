@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Entities;
@@ -22,11 +23,13 @@ namespace ServerForReact.Controllers
         private readonly ICourseService courseService;
         private readonly AppEFContext context;
         private readonly IMapper mapper;
-        public CourseController(ICourseService _courseService, AppEFContext _context, IMapper _mapper)
+        private readonly ILogger<CourseController> logger;
+        public CourseController(ICourseService _courseService, AppEFContext _context, IMapper _mapper, ILogger<CourseController> _logger)
         {
             courseService = _courseService;
             context = _context;
             mapper = _mapper;
+            logger = _logger;
         }
 
         [HttpPost("createcourse")]
@@ -35,7 +38,7 @@ namespace ServerForReact.Controllers
             var result = await courseService.CreateCourse(model);
             if (result == null)
             {
-                return BadRequest();
+                return BadRequest(404);
             }
 
             return Ok(new

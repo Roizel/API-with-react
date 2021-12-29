@@ -18,8 +18,6 @@ using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Identity;
 using ServerForReact.Extensions;
-using ServerForReact.Logger;
-using ServerForReact.Logger.Contracts;
 using ServerForReact.Mapper;
 using ServerForReact.Services;
 using System;
@@ -28,6 +26,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NLog.Extensions.Logging;
+using NLog.Web;
+
 
 namespace ServerForReact
 {
@@ -35,7 +36,6 @@ namespace ServerForReact
     {
         public Startup(IConfiguration configuration)
         {
-            LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             Configuration = configuration;
         }
 
@@ -75,7 +75,6 @@ namespace ServerForReact
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IEmailService, EmailService>();
-            services.AddSingleton<ILoggerManager, LoggerManager>();
             var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<String>("JwtKey")));
 
             services.AddAuthentication(options =>
@@ -121,7 +120,6 @@ namespace ServerForReact
                     Name = "Student"
                 }).Result;
             }
-
             //app.ConfigureExceptionhandler(logger);
             app.ConfigureCustomExceptionMiddleware();
 

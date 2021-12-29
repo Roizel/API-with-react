@@ -1,4 +1,5 @@
 ﻿using MailKit.Net.Smtp;
+using Microsoft.Extensions.Configuration;
 using MimeKit;
 using ServerForReact.Abstract;
 using System;
@@ -10,6 +11,13 @@ namespace ServerForReact.Services
 {
     public class EmailService : IEmailService
     {
+        private readonly IConfiguration configuration;
+
+        public EmailService(IConfiguration _configuration)
+        {
+            configuration = _configuration;
+        }
+
         public async Task SendEmailAsync(string email, string subject, string message)
         {
             var emailMessage = new MimeMessage();
@@ -24,8 +32,8 @@ namespace ServerForReact.Services
 
             using (var client = new SmtpClient())
             {
-                await client.ConnectAsync("smtp.gmail.com", 465, true);
-                await client.AuthenticateAsync("furermenshiu99@gmail.com", "Sasha22266");
+                await client.ConnectAsync("smtp.gmail.com", 465, true); /*smtp.gmail.com - gmail server. 465 - port. SSL - true*/
+                await client.AuthenticateAsync(configuration.GetValue<String>("Email"), configuration.GetValue<String>("Password")); /*Email and your password*/
                 await client.SendAsync(emailMessage);
 
                 await client.DisconnectAsync(true);
