@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Hangfire;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
@@ -65,7 +66,6 @@ namespace ServerForReact.Services
                 }
                 throw new AccountException(accountError);
             }
-            logger.LogInformation($"Student {model.Name} {model.Surname} was created");
             string token = jwtTokenService.CreateToken(student);
             var kortesh = (token: token, student: student);
             return kortesh;
@@ -73,7 +73,6 @@ namespace ServerForReact.Services
 
         public async Task<string> DeleteStudent(int id)
         {
-
             var student = userManager.Users.SingleOrDefault(x => x.Id == id);
             if (student == null)
             {
@@ -94,7 +93,6 @@ namespace ServerForReact.Services
 
         public async Task<(bool IsAdmin, string token)> LoginStudent(LoginViewModel model)
         {
-            logger.LogInformation($"Robe na loginci");
             var student = await userManager.FindByEmailAsync(model.Email);
             bool IsAdmin = await userManager.IsInRoleAsync(student, "Admin");
             if (student != null)
@@ -144,7 +142,6 @@ namespace ServerForReact.Services
                     }
                 }
                 await userManager.UpdateAsync(student);
-                logger.LogInformation($"Student {student.Id},  was updated to: {student.UserName} {student.Surname}");
                 return student;
             }
             else

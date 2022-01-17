@@ -2,6 +2,7 @@
 using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
 using ServerForReact.Models;
+using ServerForReact.Models.FacebookResources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,11 @@ namespace ServerForReact.Mapper
               .ForMember(x => x.CourseId, opt => opt.MapFrom(x => x.CourseId))
               .ForMember(x => x.StudentId, opt => opt.MapFrom(x => x.StudentId))
               .ForMember(x => x.JoinCourse, opt => opt.MapFrom(x => x.JoinCourse));
+
+            CreateMap<FacebookRegisterResource, AppUser>()
+              .ForMember(x => x.Photo, opt => opt.Ignore())
+              .ForMember(x => x.UserName, opt => opt.MapFrom(x => x.Name))
+              .ForMember(x => x.PhoneNumber, opt => opt.MapFrom(x => x.Phone));
 
         }
     }

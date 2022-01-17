@@ -56,13 +56,25 @@
               "target": "Package",
               "version": "[10.3.3, )"
             },
-            "Hangfire": {
+            "Hangfire.AspNetCore": {
               "target": "Package",
-              "version": "[1.7.27, )"
+              "version": "[1.7.28, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.28, )"
+            },
+            "Hangfire.SQLite": {
+              "target": "Package",
+              "version": "[1.4.2, )"
             },
             "MailKit": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[5.0.13, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

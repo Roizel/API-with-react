@@ -1,0 +1,22 @@
+2022-01-13 14:57:46.7974|0|DEBUG|ServerForReact.Program|init main 
+2022-01-13 14:57:50.4823|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-13 14:57:50.6571|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-13 14:57:50.8347|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-13 14:57:50.8359|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-13 14:57:51.3921|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3068:3fbcc342 successfully announced in 457,9215 ms 
+2022-01-13 14:57:51.4649|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3068:3fbcc342 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-13 14:57:51.5215|0|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout 
+2022-01-13 14:57:52.1323|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3068:3fbcc342 all the dispatchers started 
+2022-01-13 14:57:53.6905|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-13 14:57:53.7247|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-13 14:57:53.7282|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-13 14:57:55.2041|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - ServerForReact.Controllers.FacebookAuthenticationController.FacebookLoginAsync (ServerForReact). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

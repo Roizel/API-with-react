@@ -28,7 +28,12 @@ using System.Text;
 using System.Threading.Tasks;
 using NLog.Extensions.Logging;
 using NLog.Web;
-
+using Hangfire;
+using Hangfire.SQLite;
+using ServerForReact.Controllers;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Facebook;
 
 namespace ServerForReact
 {
@@ -71,16 +76,28 @@ namespace ServerForReact
             });
             services.AddAutoMapper(typeof(AppMapProfile));
 
+            services.AddHangfire(configuration => configuration
+                    .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                    .UseSimpleAssemblyNameTypeSerializer()
+                    .UseRecommendedSerializerSettings()
+                    .UseSQLiteStorage(Configuration.GetConnectionString("HangfireConnection")));
+            services.AddHangfireServer();
+
+
             services.AddScoped<IJwtTokenService, JwtTokenServices>();
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IEmailSenderService, EmailSenderService>();
+            services.AddScoped<FacebookService>();
             var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<String>("JwtKey")));
 
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = FacebookDefaults.AuthenticationScheme;
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             }).AddJwtBearer(cfg =>
             {
                 cfg.RequireHttpsMetadata = false;
@@ -98,7 +115,7 @@ namespace ServerForReact
         }
 
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager, IEmailService emailService)
         {
             app.UseCors(options =>
              options.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
@@ -122,6 +139,7 @@ namespace ServerForReact
             }
             //app.ConfigureExceptionhandler(logger);
             app.ConfigureCustomExceptionMiddleware();
+            app.UseHangfireDashboard();
 
             var dir = Path.Combine(Directory.GetCurrentDirectory(), "images");
             if (!Directory.Exists(dir))
@@ -145,6 +163,7 @@ namespace ServerForReact
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHangfireDashboard();
             });
         }
     }

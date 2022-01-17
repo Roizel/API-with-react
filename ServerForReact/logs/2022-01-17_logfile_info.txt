@@ -1,0 +1,69 @@
+2022-01-17 13:16:40.5511|0|DEBUG|ServerForReact.Program|init main 
+2022-01-17 13:16:43.6557|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-17 13:16:43.7813|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-17 13:16:43.9172|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-17 13:16:43.9172|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-17 13:16:44.3372|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13572:2bbd170e successfully announced in 360,7039 ms 
+2022-01-17 13:16:44.3668|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13572:2bbd170e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-17 13:16:44.4048|0|INFO|Hangfire.Server.ServerWatchdog|3 servers were removed due to timeout 
+2022-01-17 13:16:45.0255|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13572:2bbd170e all the dispatchers started 
+2022-01-17 13:16:46.4575|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-17 13:16:46.4848|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-17 13:16:46.5077|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-17 13:27:45.1015|0|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user. 
+2022-01-17 13:27:45.7899|0|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user. 
+2022-01-17 13:27:47.6646|0|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user. 
+2022-01-17 13:30:16.8320|0|INFO|ServerForReact.Services.CourseService|Student 29, Sasha Pradishuk was subscribed on course: 2, TestCourse2 
+2022-01-17 13:30:38.8076|0|INFO|ServerForReact.Services.CourseService|Student 29, Sasha Pradishuk was Unsubscribed from course: 2, TestCourse2 
+2022-01-17 13:31:54.6501|0|DEBUG|ServerForReact.Program|init main 
+2022-01-17 13:31:55.4557|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-17 13:31:55.5214|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-17 13:31:55.5828|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-17 13:31:55.5828|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-17 13:31:55.9370|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8352:e78441ef successfully announced in 327,3731 ms 
+2022-01-17 13:31:55.9370|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8352:e78441ef is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-17 13:31:56.0524|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8352:e78441ef all the dispatchers started 
+2022-01-17 13:31:57.0479|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-17 13:31:57.0643|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-17 13:31:57.0643|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-17 13:34:08.4462|0|DEBUG|ServerForReact.Program|init main 
+2022-01-17 13:34:09.2315|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-17 13:34:09.2991|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-17 13:34:09.3602|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-17 13:34:09.3602|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-17 13:34:09.6069|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15180:2970188d successfully announced in 217,8675 ms 
+2022-01-17 13:34:09.6148|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15180:2970188d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-17 13:34:09.7060|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15180:2970188d all the dispatchers started 
+2022-01-17 13:34:10.5957|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-17 13:34:10.5957|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-17 13:34:10.5957|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-17 13:39:09.6386|0|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout 
+2022-01-17 13:40:21.0990|0|INFO|ServerForReact.Controllers.AccountController|Email was send: TestLol@gmail.com 
+2022-01-17 13:48:10.5901|0|DEBUG|ServerForReact.Program|init main 
+2022-01-17 13:48:11.6225|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-17 13:48:11.6961|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-17 13:48:11.7594|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-17 13:48:11.7594|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-17 13:48:12.2024|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12296:b0d775b5 successfully announced in 381,8536 ms 
+2022-01-17 13:48:12.2113|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12296:b0d775b5 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-17 13:48:12.2337|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-01-17 13:48:12.3383|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12296:b0d775b5 all the dispatchers started 
+2022-01-17 13:48:13.2276|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-17 13:48:13.2356|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-17 13:48:13.2356|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 

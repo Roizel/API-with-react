@@ -1,0 +1,24 @@
+2022-01-09 17:27:54.5388|0|DEBUG|ServerForReact.Program|init main 
+2022-01-09 17:27:55.7248|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-09 17:27:55.7816|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-09 17:27:55.8678|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-09 17:27:55.8704|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-09 17:27:56.1005|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3060:98dabf7b successfully announced in 212,3212 ms 
+2022-01-09 17:27:56.1217|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3060:98dabf7b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-09 17:27:56.1583|0|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout 
+2022-01-09 17:27:56.2398|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3060:98dabf7b all the dispatchers started 
+2022-01-09 17:27:57.0340|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-09 17:27:57.0340|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-09 17:27:57.0410|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-09 17:34:57.6323|0|INFO|ServerForReact.Services.StudentService|Robe na loginci 
+2022-01-09 17:34:57.7198|0|INFO|ServerForReact.Controllers.AccountController|Robe 
+2022-01-09 18:58:48.6994|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-01-09 18:58:48.6994|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3060:98dabf7b caught stopping signal... 
+2022-01-09 18:58:48.6994|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3060:98dabf7b caught stopped signal... 
+2022-01-09 18:58:48.6994|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3060:98dabf7b All dispatchers stopped 
+2022-01-09 18:58:48.7163|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3060:98dabf7b successfully reported itself as stopped in 8,7644 ms 
+2022-01-09 18:58:48.7163|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3060:98dabf7b has been stopped in total 14,3822 ms 

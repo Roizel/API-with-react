@@ -1,0 +1,362 @@
+2022-01-05 14:09:09.8883|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 14:09:11.5831|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 14:09:11.6555|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 14:09:11.7387|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 14:09:11.7387|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 14:09:12.0173|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:9708:64921235 successfully announced in 244,0503 ms 
+2022-01-05 14:09:12.0173|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:9708:64921235 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 14:09:12.0852|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-01-05 14:09:12.1606|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:9708:64921235 all the dispatchers started 
+2022-01-05 14:09:13.5450|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 14:09:13.5579|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 14:09:13.5739|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 14:17:56.6678|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 14:17:57.5177|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 14:17:57.5883|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 14:17:57.6558|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 14:17:57.6558|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 14:17:57.9990|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:6544:49571abd successfully announced in 316,5388 ms 
+2022-01-05 14:17:58.0058|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:6544:49571abd is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 14:17:58.1001|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:6544:49571abd all the dispatchers started 
+2022-01-05 14:17:59.0682|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 14:17:59.0820|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 14:17:59.0820|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 14:19:53.6398|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 14:19:54.3976|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 14:19:54.4619|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 14:19:54.5251|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 14:19:54.5251|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 14:19:54.8029|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8960:58e83fc0 successfully announced in 252,9965 ms 
+2022-01-05 14:19:54.8029|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8960:58e83fc0 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 14:19:54.8531|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-01-05 14:19:54.9657|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8960:58e83fc0 all the dispatchers started 
+2022-01-05 14:19:55.8388|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 14:19:55.8458|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 14:19:55.8458|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 14:21:10.7820|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 14:21:11.8249|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 14:21:11.8903|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 14:21:11.9718|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 14:21:11.9718|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 14:21:12.3723|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12432:9fff72ac successfully announced in 349,6327 ms 
+2022-01-05 14:21:12.3953|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12432:9fff72ac is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 14:21:12.5423|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12432:9fff72ac all the dispatchers started 
+2022-01-05 14:21:13.5487|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 14:21:13.5631|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 14:21:13.5631|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 14:26:20.7753|0|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout 
+2022-01-05 14:26:45.5662|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 14:26:46.3167|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 14:26:46.3785|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 14:26:46.4380|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 14:26:46.4388|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 14:26:46.7000|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15124:d3188f71 successfully announced in 237,8743 ms 
+2022-01-05 14:26:46.7097|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15124:d3188f71 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 14:26:46.8674|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15124:d3188f71 all the dispatchers started 
+2022-01-05 14:26:47.7334|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 14:26:47.7437|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 14:26:47.7437|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 14:27:20.9878|0|INFO|ServerForReact.Services.CourseService|Student 28, Sasha Pradishchuk was Unsubscribed from course course: 12, TestDate 
+2022-01-05 14:29:00.7522|0|INFO|ServerForReact.Services.CourseService|Course TestDate2 was created 
+2022-01-05 14:31:45.5977|0|INFO|ServerForReact.Services.CourseService|Student 28, Sasha Pradishchuk was subscribed on course: 13, TestDate2 
+2022-01-05 14:31:46.7528|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-01-05 14:36:53.5165|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 14:36:54.7722|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 14:36:54.8491|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 14:36:54.9968|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 14:36:54.9968|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 14:36:55.3788|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13748:2de90a92 successfully announced in 351,8301 ms 
+2022-01-05 14:36:55.3788|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13748:2de90a92 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 14:36:55.4699|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13748:2de90a92 all the dispatchers started 
+2022-01-05 14:36:56.4547|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 14:36:56.4547|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 14:36:56.4547|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 15:23:52.9840|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 15:23:53.8135|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 15:23:53.8899|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 15:23:53.9447|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 15:23:53.9447|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 15:23:54.2080|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14432:043547a1 successfully announced in 232,4105 ms 
+2022-01-05 15:23:54.2080|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14432:043547a1 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 15:23:54.2295|0|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout 
+2022-01-05 15:23:54.4024|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14432:043547a1 all the dispatchers started 
+2022-01-05 15:23:55.2144|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 15:23:55.2221|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 15:23:55.2221|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 15:24:04.5410|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '31': an exception occurred. Retry attempt 7 of 10 will be performed in 00:22:12. System.TypeLoadException: Could not load type 'ServerForReact.Services.TestService' from assembly 'ServerForReact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(QCallAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type, ObjectHandleOnStack keepAlive, ObjectHandleOnStack assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase)
+   at System.TypeNameParser.ResolveType(Assembly assembly, String[] names, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.TypeNameParser.ConstructType(Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName)
+   at Hangfire.Storage.InvocationData.DeserializeJob()
+2022-01-05 15:24:04.6252|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '32': an exception occurred. Retry attempt 8 of 10 will be performed in 00:41:04. System.TypeLoadException: Could not load type 'ServerForReact.Controllers.SendEmailsController' from assembly 'ServerForReact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(QCallAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type, ObjectHandleOnStack keepAlive, ObjectHandleOnStack assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase)
+   at System.TypeNameParser.ResolveType(Assembly assembly, String[] names, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.TypeNameParser.ConstructType(Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName)
+   at Hangfire.Storage.InvocationData.DeserializeJob()
+2022-01-05 15:24:31.1176|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 4 of 10 will be performed in 00:03:32. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). s21sm3848443ljg.131 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 15:24:31.1271|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 4 of 10 will be performed in 00:03:04. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). j21sm3034116lfu.258 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 15:24:31.1271|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 5 of 10 will be performed in 00:06:51. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). z10sm4182311lfg.124 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 15:24:31.1271|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 4 of 10 will be performed in 00:03:24. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). 10sm1781198lju.10 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 15:24:31.1271|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 4 of 10 will be performed in 00:02:52. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). 8sm3903567ljf.123 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 15:24:31.1271|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 5 of 10 will be performed in 00:05:31. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). s6sm3768576ljo.61 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 15:24:31.1498|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 6 of 10 will be performed in 00:12:40. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). m9sm2913254ljp.66 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 15:24:31.1571|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 6 of 10 will be performed in 00:12:34. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). c14sm3802141ljj.84 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 15:26:02.3032|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 15:26:03.1815|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 15:26:03.2482|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 15:26:03.3081|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 15:26:03.3081|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 15:26:03.5585|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13976:39cbfb2f successfully announced in 222,5481 ms 
+2022-01-05 15:26:03.5662|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13976:39cbfb2f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 15:26:03.6584|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13976:39cbfb2f all the dispatchers started 
+2022-01-05 15:26:16.6217|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 15:26:17.4227|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 15:26:17.4868|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 15:26:17.5444|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 15:26:17.5444|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 15:26:17.8231|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:1320:2ac7a6cc successfully announced in 250,0701 ms 
+2022-01-05 15:26:17.8311|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:1320:2ac7a6cc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 15:26:17.9151|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:1320:2ac7a6cc all the dispatchers started 
+2022-01-05 15:26:26.1289|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 15:26:26.1289|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 15:26:26.1414|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 16:15:33.1095|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 16:15:34.1606|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 16:15:34.2445|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 16:15:34.3034|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 16:15:34.3034|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 16:15:34.5682|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13816:535390f5 successfully announced in 235,4274 ms 
+2022-01-05 16:15:34.5682|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13816:535390f5 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 16:15:34.5900|0|INFO|Hangfire.Server.ServerWatchdog|3 servers were removed due to timeout 
+2022-01-05 16:15:34.7344|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:13816:535390f5 all the dispatchers started 
+2022-01-05 16:15:34.8840|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '31': an exception occurred. Retry attempt 8 of 10 will be performed in 00:41:04. System.TypeLoadException: Could not load type 'ServerForReact.Services.TestService' from assembly 'ServerForReact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(QCallAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type, ObjectHandleOnStack keepAlive, ObjectHandleOnStack assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase)
+   at System.TypeNameParser.ResolveType(Assembly assembly, String[] names, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.TypeNameParser.ConstructType(Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName)
+   at Hangfire.Storage.InvocationData.DeserializeJob()
+2022-01-05 16:15:34.9301|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '32': an exception occurred. Retry attempt 9 of 10 will be performed in 01:12:34. System.TypeLoadException: Could not load type 'ServerForReact.Controllers.SendEmailsController' from assembly 'ServerForReact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(QCallAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type, ObjectHandleOnStack keepAlive, ObjectHandleOnStack assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Common.TypeHelper.TypeResolver(Assembly assembly, String typeName, Boolean ignoreCase)
+   at System.TypeNameParser.ResolveType(Assembly assembly, String[] names, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.TypeNameParser.ConstructType(Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.TypeNameParser.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError, Boolean ignoreCase, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Func`2 assemblyResolver, Func`4 typeResolver, Boolean throwOnError)
+   at Hangfire.Common.TypeHelper.DefaultTypeResolver(String typeName)
+   at Hangfire.Storage.InvocationData.DeserializeJob()
+2022-01-05 16:15:35.6417|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 16:15:35.6417|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 16:15:35.6581|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 16:15:50.9729|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 7 of 10 will be performed in 00:23:36. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). x24sm2214847lfu.244 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 16:15:50.9965|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 7 of 10 will be performed in 00:24:18. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). x7sm4184561lfe.159 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 16:15:50.9965|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 7 of 10 will be performed in 00:22:47. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). z10sm3652760lfd.220 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 16:15:51.0074|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 7 of 10 will be performed in 00:24:04. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). bt18sm4204885lfb.50 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 16:15:51.0074|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 7 of 10 will be performed in 00:23:50. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). j4sm3469207lfg.147 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 16:15:51.0074|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 7 of 10 will be performed in 00:24:11. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). y11sm4195861lfe.252 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 16:15:51.0074|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 8 of 10 will be performed in 00:43:36. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). q15sm4198582lfr.170 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 16:15:51.0176|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '35': an exception occurred. Retry attempt 8 of 10 will be performed in 00:40:40. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). u2sm4195922lfg.300 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-01-05 16:20:04.3313|0|WARN|Hangfire.Server.Worker|Slow log: (Hangfire.CaptureCultureAttribute, Hangfire.Server.PerformingContext) performed "OnPerforming for 52" in 98 sec 
+2022-01-05 16:20:04.3313|0|WARN|Hangfire.Server.Worker|Slow log: (Hangfire.CaptureCultureAttribute, Hangfire.Server.PerformingContext) performed "OnPerforming for 52" in 92 sec 
+2022-01-05 16:23:28.3414|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 16:23:28.5976|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 16:23:28.6283|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 16:23:28.6741|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 16:23:28.6741|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 16:23:28.8400|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11448:0f4af721 successfully announced in 152,3342 ms 
+2022-01-05 16:23:28.8537|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11448:0f4af721 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 16:23:28.8787|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11448:0f4af721 all the dispatchers started 
+2022-01-05 16:23:29.5804|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 16:23:29.5804|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 16:23:29.5804|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 16:25:48.0804|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-01-05 16:25:48.0804|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11448:0f4af721 caught stopping signal... 
+2022-01-05 16:25:48.0969|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11448:0f4af721 caught stopped signal... 
+2022-01-05 16:25:48.1162|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11448:0f4af721 All dispatchers stopped 
+2022-01-05 16:25:48.1265|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11448:0f4af721 successfully reported itself as stopped in 3,9404 ms 
+2022-01-05 16:25:48.1265|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11448:0f4af721 has been stopped in total 37,4264 ms 
+2022-01-05 16:25:57.1435|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 16:25:58.1643|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 16:25:58.2309|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 16:25:58.2900|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 16:25:58.2900|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 16:25:58.6066|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14536:7a8b06b6 successfully announced in 288,8492 ms 
+2022-01-05 16:25:58.6140|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14536:7a8b06b6 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 16:25:58.7321|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14536:7a8b06b6 all the dispatchers started 
+2022-01-05 16:25:59.5676|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 16:25:59.5676|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 16:25:59.5784|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 16:33:54.3158|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 16:33:54.5642|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 16:33:54.5948|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 16:33:54.6376|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 16:33:54.6376|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 16:33:54.7771|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10940:361dad0e successfully announced in 129,0593 ms 
+2022-01-05 16:33:54.7851|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10940:361dad0e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 16:33:54.7851|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-01-05 16:33:54.8004|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10940:361dad0e all the dispatchers started 
+2022-01-05 16:33:55.4923|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 16:33:55.4923|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 16:33:55.4923|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-01-05 16:35:47.2764|0|DEBUG|ServerForReact.Program|init main 
+2022-01-05 16:35:47.5176|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-01-05 16:35:47.5514|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-01-05 16:35:47.5938|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-01-05 16:35:47.5945|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-01-05 16:35:47.7326|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:16124:c6da6298 successfully announced in 128,0758 ms 
+2022-01-05 16:35:47.7382|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:16124:c6da6298 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-01-05 16:35:47.7382|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-01-05 16:35:47.7382|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:16124:c6da6298 all the dispatchers started 
+2022-01-05 16:35:48.4550|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 16:35:48.4550|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 16:35:48.4550|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 

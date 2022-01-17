@@ -160,7 +160,7 @@ namespace ServerForReact.Services
                 {
                     context.StudentCourses.Remove(find);
                     await context.SaveChangesAsync();
-                    logger.LogInformation($"Student {student.Id}, {student.UserName} {student.Surname} was Unsubscribed from course course: {course.Id}, {course.Name}");
+                    logger.LogInformation($"Student {student.Id}, {student.UserName} {student.Surname} was Unsubscribed from course: {course.Id}, {course.Name}");
                     return find;
                 }
                 else

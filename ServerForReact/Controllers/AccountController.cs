@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using Hangfire;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Facebook;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -23,19 +27,21 @@ namespace ServerForReact.Controllers
     {
         private readonly IStudentService studentService;
         private readonly UserManager<AppUser> userManager;
-        private readonly IJwtTokenService tokenService;
         private readonly IMapper mapper;
         private readonly ILogger<AccountController> logger;
         private readonly IEmailService emailService;
+        private readonly IEmailSenderService emailSenderService;
+
         public AccountController(IStudentService _studentService, UserManager<AppUser> _userManager,
-            IJwtTokenService _tokenService, IMapper _mapper, ILogger<AccountController> _logger, IEmailService _emailService)
+            IJwtTokenService _tokenService, IMapper _mapper, ILogger<AccountController> _logger, IEmailService _emailService,
+            IEmailSenderService _emailSenderService)
         {
             mapper = _mapper;
             studentService = _studentService;
             userManager = _userManager;
-            tokenService = _tokenService;
             logger = _logger;
             emailService = _emailService;
+            emailSenderService = _emailSenderService;
         }
 
         [HttpPost("register")]
@@ -59,7 +65,7 @@ namespace ServerForReact.Controllers
                                                  protocol: HttpContext.Request.Scheme);
 
                     await emailService.SendEmailAsync(
-                                                     model.Email, 
+                                                     model.Email,
                                                      "Confirm your account",
                                                      $"Confirm registration, go to link: <a href='{callbackUrl}'>link</a>");
 
@@ -104,7 +110,6 @@ namespace ServerForReact.Controllers
             {
                 return BadRequest();
             }
-            logger.LogInformation($"Robe");
             return Ok(new { result.token, result.IsAdmin });
         }
 
@@ -140,6 +145,22 @@ namespace ServerForReact.Controllers
         public IActionResult SaveEditedStudent([FromForm] SaveEditStudentViewModel model)
         {
             studentService.UpdateStudent(model);
+            return Ok();
+        }
+
+        [Route("Test")]
+        [HttpGet]
+        public IActionResult Test()
+        {
+            //BackgroundJob.Enqueue<IEmailSenderService>(
+            //    x => x.Day());
+            //BackgroundJob.Enqueue<IEmailSenderService>(
+            //    x => x.Week());
+            //BackgroundJob.Enqueue<IEmailSenderService>(
+            //    x => x.Mounth());
+            emailSenderService.Day();
+            //emailSenderService.Week();
+            //emailSenderService.Mounth();
             return Ok();
         }
     }
