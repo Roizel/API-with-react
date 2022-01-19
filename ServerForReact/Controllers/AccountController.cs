@@ -106,9 +106,9 @@ namespace ServerForReact.Controllers
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
             var result = await studentService.LoginStudent(model);
-            if (result.token == "")
+            if (result.token == null)
             {
-                return BadRequest();
+                return StatusCode(404);
             }
             return Ok(new { result.token, result.IsAdmin });
         }
@@ -118,6 +118,10 @@ namespace ServerForReact.Controllers
         public async Task<IActionResult> DeleteStudent(int id)
         {
             string delete = await studentService.DeleteStudent(id);
+            if (delete == null)
+            {
+                return StatusCode(404);
+            }
             return Ok(new { delete });
         }
 
@@ -144,7 +148,11 @@ namespace ServerForReact.Controllers
         [HttpPut("savestudent")]
         public IActionResult SaveEditedStudent([FromForm] SaveEditStudentViewModel model)
         {
-            studentService.UpdateStudent(model);
+            var check = studentService.UpdateStudent(model);
+            if (check == null)
+            {
+                return StatusCode(404);
+            }
             return Ok();
         }
 

@@ -55,7 +55,11 @@ namespace ServerForReact.Controllers
         [Route("facebook-register")]
         public async Task<IActionResult> FacebookRegisterAsync([FromForm] FacebookRegisterResource resource)
         {
-            string token = await fb.FacebookRegister(resource);
+            string token = await fb.CreateUserFromFacebook(resource);
+            if (token == null)
+            {
+                return StatusCode(409);
+            }
             return Ok(token);
         }
     }

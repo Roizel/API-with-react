@@ -36,11 +36,6 @@ namespace ServerForReact.Controllers
         public async Task<IActionResult> Create([FromForm] CreateCourseViewModel model)
         {
             var result = await courseService.CreateCourse(model);
-            if (result == null)
-            {
-                return BadRequest(404);
-            }
-
             return Ok(new
             {
                 result
@@ -52,7 +47,11 @@ namespace ServerForReact.Controllers
         public async Task<IActionResult> DeleteCourse(int id)
         {
             var delete = await courseService.DeleteCourse(id);
-            return Ok(new { delete });
+            if (delete == null)
+            {
+                return StatusCode(404);
+            }
+            return Ok();
         }
 
         [Route("allcourses")]
@@ -90,27 +89,35 @@ namespace ServerForReact.Controllers
         [HttpPut("savecourse")]
         public IActionResult SaveEditedStudent([FromForm] SaveEditCourseViewModel model)
         {
-
-            courseService.UpdateCourse(model);
+            var check = courseService.UpdateCourse(model);
+            if (check.Result == null)
+            {
+                return StatusCode(404);
+            }
             return Ok();
-
         }
 
         [HttpPost("subscribe")]
         public IActionResult Subcribe([FromForm] SubscribeViewModel model)
         {
 
-            courseService.Subscribe(model);
+            var check = courseService.Subscribe(model);
+            if (check.Result == null)
+            {
+                return StatusCode(404);
+            }
             return Ok();
 
         }
         [HttpPost("unsubscribe")]
         public IActionResult UnSubcribe([FromForm] SubscribeViewModel model)
         {
-
-            courseService.UnSubscribe(model);
+            var check = courseService.UnSubscribe(model);
+            if (check.Result == null)
+            {
+                return StatusCode(404);
+            }
             return Ok();
-
         }
     }
 }

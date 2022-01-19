@@ -41,17 +41,11 @@ namespace ServerForReact.Data
                     .HasForeignKey(ur => ur.UserId)
                     .IsRequired();
 
-                builder.Entity<StudentCourses>().HasKey(table => new {
-                    table.StudentId,
-                    table.CourseId,
-                    table.Id
-                });
-
-                //builder.Entity<StudentCourses>().Property(o => o.StudentId)
-                //    .HasColumnName("StudentId");
-
-                //builder.Entity<StudentCourses>().Property(o => o.CourseId)
-                //    .HasColumnName("CourseId");
+                //builder.Entity<StudentCourses>().HasKey(table => new {
+                //    table.StudentId,
+                //    table.CourseId,
+                //    table.Id
+                //});
             });
         }
 

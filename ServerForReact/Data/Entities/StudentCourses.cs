@@ -12,9 +12,9 @@ namespace ServerForReact.Data.Entities
     {
         [Key]
         public int Id { get; set; }
-        [Key, ForeignKey("Student"), Column(Order = 0)]
+        [ForeignKey("Student")]
         public long StudentId { get; set; }
-        [Key, ForeignKey("Course"), Column(Order = 1)]
+        [ForeignKey("Course")]
         public int CourseId { get; set; }
         public Courses Course { get; set; }
         public AppUser Student { get; set; }

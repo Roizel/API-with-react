@@ -9,6 +9,7 @@ using ServerForReact.Data;
 using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
 using ServerForReact.Exceptions;
+using ServerForReact.Helpers;
 using ServerForReact.Models;
 using System;
 using System.Collections.Generic;
@@ -35,27 +36,11 @@ namespace ServerForReact.Services
         public async Task<Courses> CreateCourse(CreateCourseViewModel model)
         {
             var course = mapper.Map<Courses>(model);
-            string fileName = String.Empty;
-
-            if (model.Photo != null)
-            {
-                string randomFilename = Path.GetRandomFileName() +
-                    Path.GetExtension(model.Photo.FileName);
-
-                string dirPath = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                fileName = Path.Combine(dirPath, randomFilename);
-                using (var file = System.IO.File.Create(fileName))
-                {
-                    model.Photo.CopyTo(file);
-                }
-                course.PathImg = randomFilename;
-            }
-
+            course.PathImg = PhotoHelper.AddPhoto(model.Photo);
             course.Name = model.Name;
             course.StartCourse = model.StartCourse;
             course.Description = model.Description;
             course.Duration = model.Duration;
-            logger.LogInformation($"Course {course.Name} was created");
             context.Courses.Add(course);
             await context.SaveChangesAsync();
             return course;
@@ -66,20 +51,12 @@ namespace ServerForReact.Services
             var course = context.Courses.SingleOrDefault(x => x.Id == id);
             if (course == null)
             {
-                CourseError error = new CourseError();
-                error.Errors.Invalid.Add("This id does not exist");
-                throw new CourseException(error);
+                return null;
             }
-            if (course.PathImg != null)
-            {
-                var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                var FilePath = Path.Combine(directory, course.PathImg);
-                System.IO.File.Delete(FilePath);
-            }
+            PhotoHelper.DeletePhoto(course.PathImg);
             context.Courses.Remove(course);
             await context.SaveChangesAsync();
-            logger.LogInformation($"Course {course.Name}, Id: {course.Id} was deleted successfully");
-            return $"Course {course.Name}, Id: {course.Id} was deleted successfully";
+            return "Ok";
         }
 
         public async Task<Courses> UpdateCourse(SaveEditCourseViewModel model)
@@ -88,43 +65,19 @@ namespace ServerForReact.Services
                     .SingleOrDefault(x => x.Id == model.Id);
             if (course != null)
             {
-                logger.LogInformation($"Id: {course.Id}, Course {course.Name} is updating");
                 course.Name = model.Name;
                 course.Description = model.Description;
                 course.Duration = model.Duration;
                 course.StartCourse = model.StartCourse;
-                string fileName = String.Empty;
-                if (model.Photo != null)
-                {
-                    if (course.PathImg != null)
-                    {
-                        var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                        var FilePath = Path.Combine(directory, course.PathImg);
-                        System.IO.File.Delete(FilePath);
-                    }
-                    if (model.Photo != null)
-                    {
-                        var ext = Path.GetExtension(model.Photo.FileName);
-                        fileName = Path.GetRandomFileName() + ext;
-                        var dir = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                        var filePath = Path.Combine(dir, fileName);
-                        using (var stream = System.IO.File.Create(filePath))
-                        {
-                            model.Photo.CopyTo(stream);
-                        }
-                        course.PathImg = fileName;
-                    }
-                }
+                PhotoHelper.DeletePhoto(course.PathImg);
+                course.PathImg = PhotoHelper.AddPhoto(model.Photo);
                 context.Entry(course).State = EntityState.Modified;
-                logger.LogInformation($"Id: {course.Id}, was updated to {course.Name}");
                 await context.SaveChangesAsync();
                 return course;
             }
             else
             {
-                AccountError error = new AccountError();
-                error.Errors.Invalid.Add("Course does not exist");
-                throw new AccountException(error);
+                return null;
             }
         }
         public async Task<StudentCourses> Subscribe(SubscribeViewModel model)
@@ -139,14 +92,11 @@ namespace ServerForReact.Services
                 studentCourses.JoinCourse = DateTime.Now;
                 context.StudentCourses.Add(studentCourses);
                 await context.SaveChangesAsync();
-                logger.LogInformation($"Student {student.Id}, {student.UserName} {student.Surname} was subscribed on course: {course.Id}, {course.Name}");
                 return studentCourses;
             }
             else
             {
-                AccountError error = new AccountError();
-                error.Errors.Invalid.Add("Something went wrong");
-                throw new AccountException(error);
+                return null;
             }
         }
         public async Task<StudentCourses> UnSubscribe(SubscribeViewModel model)
@@ -160,21 +110,16 @@ namespace ServerForReact.Services
                 {
                     context.StudentCourses.Remove(find);
                     await context.SaveChangesAsync();
-                    logger.LogInformation($"Student {student.Id}, {student.UserName} {student.Surname} was Unsubscribed from course: {course.Id}, {course.Name}");
                     return find;
                 }
                 else
                 {
-                    AccountError error = new AccountError();
-                    error.Errors.Invalid.Add("U don`t subs to this course");
-                    throw new AccountException(error);
+                    return null;
                 }
             }
             else
             {
-                AccountError error = new AccountError();
-                error.Errors.Invalid.Add("Something went wrong");
-                throw new AccountException(error);
+                return null;
             }
         }
     }

@@ -9,6 +9,6 @@ namespace ServerForReact.Abstract
     public interface IFacebookService
     {
         public Task<FacebookUserResource> GetUserFromFacebookAsync(string facebookToken);
-        public Task<string> FacebookRegister(FacebookRegisterResource model);
+        public Task<string> CreateUserFromFacebook(FacebookRegisterResource model);
     }
 }

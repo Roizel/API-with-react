@@ -8,6 +8,7 @@ using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Identity;
 using ServerForReact.Exceptions;
+using ServerForReact.Helpers;
 using ServerForReact.Models;
 using System;
 using System.Collections.Generic;
@@ -39,32 +40,16 @@ namespace ServerForReact.Services
         public async Task<(string token, AppUser student)> CreateStudent(RegisterViewModel model)
         {
             var student = mapper.Map<AppUser>(model);
-            string fileName = String.Empty;
-            if (model.Photo != null)
-            {
-                string randomFilename = Path.GetRandomFileName() +
-                    Path.GetExtension(model.Photo.FileName);
-
-                string dirPath = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                fileName = Path.Combine(dirPath, randomFilename);
-                using (var file = System.IO.File.Create(fileName))
-                {
-                    model.Photo.CopyTo(file);
-                }
-                student.Photo = randomFilename;
-            }
+            student.Photo = PhotoHelper.AddPhoto(model.Photo);
 
             var result = await userManager.CreateAsync(student, model.Password);
             if (!result.Succeeded)
             {
-                if (!string.IsNullOrEmpty(fileName))
-                    System.IO.File.Delete(fileName);
-                AccountError accountError = new AccountError();
-                foreach (var item in result.Errors)
-                {
-                    accountError.Errors.Invalid.Add(item.Description);
-                }
-                throw new AccountException(accountError);
+                PhotoHelper.DeletePhoto(student.Photo);
+                string tokenNull = null;
+                AppUser studentNull = null;
+                var error = (token: tokenNull, student: studentNull);
+                return error;
             }
             string token = jwtTokenService.CreateToken(student);
             var kortesh = (token: token, student: student);
@@ -76,16 +61,9 @@ namespace ServerForReact.Services
             var student = userManager.Users.SingleOrDefault(x => x.Id == id);
             if (student == null)
             {
-                AccountError error = new AccountError();
-                error.Errors.Invalid.Add("This id does not exist");
-                throw new AccountException(error);
+                return null;
             }
-            if (student.Photo != null)
-            {
-                var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                var FilePath = Path.Combine(directory, student.Photo);
-                System.IO.File.Delete(FilePath);
-            }
+            PhotoHelper.DeletePhoto(student.Photo);
             context.Users.Remove(student);
             await context.SaveChangesAsync();
             return $"Student {student.UserName} {student.Surname} was deleted successfully";
@@ -103,7 +81,8 @@ namespace ServerForReact.Services
             }
             else
             {
-                var error = (IsAdmin: false, token: "");
+                string tokenNull = null;
+                var error = (IsAdmin: false, token: tokenNull);
                 return error;
             }
         }
@@ -119,36 +98,14 @@ namespace ServerForReact.Services
                 student.Surname = model.Surname;
                 student.PhoneNumber = model.Phone;
                 student.Age = model.Age;
-                string fileName = String.Empty;
-                if (model.Photo != null)
-                {
-                    if (student.Photo != null)
-                    {
-                        var directory = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                        var FilePath = Path.Combine(directory, student.Photo);
-                        System.IO.File.Delete(FilePath);
-                    }
-                    if (model.Photo != null)
-                    {
-                        var ext = Path.GetExtension(model.Photo.FileName);
-                        fileName = Path.GetRandomFileName() + ext;
-                        var dir = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                        var filePath = Path.Combine(dir, fileName);
-                        using (var stream = System.IO.File.Create(filePath))
-                        {
-                            model.Photo.CopyTo(stream);
-                        }
-                        student.Photo = fileName;
-                    }
-                }
+                PhotoHelper.DeletePhoto(student.Photo);
+                student.Photo = PhotoHelper.AddPhoto(model.Photo);
                 await userManager.UpdateAsync(student);
                 return student;
             }
             else
             {
-                AccountError error = new AccountError();
-                error.Errors.Invalid.Add("Student does not exist");
-                throw new AccountException(error);
+                return null;
             }
         }
 

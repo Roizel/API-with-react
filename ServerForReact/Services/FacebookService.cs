@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using ServerForReact.Abstract;
 using ServerForReact.Data.Identity;
+using ServerForReact.Helpers;
 using ServerForReact.Models.FacebookResources;
 using System;
 using System.Collections.Generic;
@@ -49,22 +50,35 @@ namespace ServerForReact.Services
             }
 
             string userEmail = result.email;
-            var checkEmail = userManager.Users.FirstOrDefault(x => x.Email == userEmail);
-
-            if (checkEmail == null)
+            if (userEmail != null)
             {
-                var account = new FacebookUserResource()
+                userEmail = userEmail.ToLower();
+                var checkEmail = userManager.Users.FirstOrDefault(x => x.Email == userEmail);
+                if (checkEmail == null)
                 {
-                    Email = userEmail,
-                    FirstName = result.first_name,
-                    LastName = result.last_name,
-                };
+                    var account = new FacebookUserResource
+                    {
+                        Email = userEmail,
+                        FirstName = result.first_name,
+                        LastName = result.last_name,
+                    };
 
-                return account;
+                    return account;
+                }
+                else
+                {
+                    return null;
+                }
             }
             else
             {
-                return null;
+                var account = new FacebookUserResource
+                {
+                    Email = "",
+                    FirstName = result.first_name,
+                    LastName = result.last_name,
+                };
+                return account;
             }
         }
         public async Task<string> FacebookLoginAsync(string facebookToken)
@@ -76,6 +90,7 @@ namespace ServerForReact.Services
             }
 
             string userEmail = result.email;
+            userEmail = userEmail.ToLower();
             var student = userManager.Users.FirstOrDefault(x => x.Email == userEmail);
             if (student.Email != null)
             {
@@ -87,29 +102,22 @@ namespace ServerForReact.Services
             }
         }
 
-        public async Task<string> FacebookRegister(FacebookRegisterResource model)
+        public async Task<string> CreateUserFromFacebook(FacebookRegisterResource model)
         {
-            var student = mapper.Map<AppUser>(model);
-            string fileName = String.Empty;
-            if (model.Photo != null)
+            var check = userManager.Users.FirstOrDefault(x=> x.Email == model.Email);
+            if (check != null)
             {
-                string randomFilename = Path.GetRandomFileName() +
-                    Path.GetExtension(model.Photo.FileName);
-
-                string dirPath = Path.Combine(Directory.GetCurrentDirectory(), "images");
-                fileName = Path.Combine(dirPath, randomFilename);
-                using (var file = System.IO.File.Create(fileName))
-                {
-                    model.Photo.CopyTo(file);
-                }
-                student.Photo = randomFilename;
+                return null;
             }
+
+            var student = mapper.Map<AppUser>(model);
+            student.Photo = PhotoHelper.AddPhoto(model.Photo);
 
             var result = await userManager.CreateAsync(student);
             if (!result.Succeeded)
             {
-                if (!string.IsNullOrEmpty(fileName))
-                    System.IO.File.Delete(fileName);
+                PhotoHelper.DeletePhoto(student.Photo);
+                return null;
             }
             string token = jwtTokenService.CreateToken(student);
             return token;
