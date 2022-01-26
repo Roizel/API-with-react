@@ -6,7 +6,6 @@ using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
-using ServerForReact.Exceptions;
 using ServerForReact.Models;
 using System;
 using System.Collections.Generic;
@@ -24,12 +23,12 @@ namespace ServerForReact.Controllers
         private readonly AppEFContext context;
         private readonly IMapper mapper;
         private readonly ILogger<CourseController> logger;
-        public CourseController(ICourseService _courseService, AppEFContext _context, IMapper _mapper, ILogger<CourseController> _logger)
+        public CourseController(ICourseService courseService, AppEFContext context, IMapper mapper, ILogger<CourseController> logger)
         {
-            courseService = _courseService;
-            context = _context;
-            mapper = _mapper;
-            logger = _logger;
+            this.courseService = courseService;
+            this.context = context;
+            this.mapper = mapper;
+            this.logger = logger;
         }
 
         [HttpPost("createcourse")]
@@ -58,7 +57,6 @@ namespace ServerForReact.Controllers
         [HttpGet]
         public IActionResult GetCourses()
         {
-            Thread.Sleep(1000);
             var list = context.Courses
                 .Select(x => mapper.Map<CourseItemViewModel>(x))
                 .ToList();

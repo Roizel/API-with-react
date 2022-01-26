@@ -12,10 +12,10 @@ namespace ServerForReact.Services
         private readonly AppEFContext context;
         private readonly IEmailService emailService;
 
-        public EmailSenderService(AppEFContext _context, IEmailService _emailService)
+        public EmailSenderService(AppEFContext context, IEmailService emailService)
         {
-            context = _context;
-            emailService = _emailService;
+            this.context = context;
+            this.emailService = emailService;
         }
         public Task Day()
         {

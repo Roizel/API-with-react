@@ -7,7 +7,6 @@ using NLog;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Identity;
-using ServerForReact.Exceptions;
 using ServerForReact.Helpers;
 using ServerForReact.Models;
 using System;
@@ -26,15 +25,15 @@ namespace ServerForReact.Services
         private readonly AppEFContext context;
         private readonly IEmailService emailService;
         private readonly ILogger<StudentService> logger;
-        public StudentService(UserManager<AppUser> _userManager, IJwtTokenService _jwtTokenService, SignInManager<AppUser> _signInManager,
-            IMapper _mapper, AppEFContext _context, IEmailService _emailService, ILogger<StudentService> _logger)
+        public StudentService(UserManager<AppUser> userManager, IJwtTokenService jwtTokenService,IMapper mapper,
+            AppEFContext context, IEmailService emailService, ILogger<StudentService> logger)
         {
-            mapper = _mapper;
-            userManager = _userManager;
-            jwtTokenService = _jwtTokenService;
-            context = _context;
-            emailService = _emailService;
-            logger = _logger;
+            this.mapper = mapper;
+            this.userManager = userManager;
+            this.jwtTokenService = jwtTokenService;
+            this.context = context;
+            this.emailService = emailService;
+            this.logger = logger;
         }
 
         public async Task<(string token, AppUser student)> CreateStudent(RegisterViewModel model)
@@ -52,8 +51,8 @@ namespace ServerForReact.Services
                 return error;
             }
             string token = jwtTokenService.CreateToken(student);
-            var kortesh = (token: token, student: student);
-            return kortesh;
+            var StudentToken = (token: token, student: student);
+            return StudentToken;
         }
 
         public async Task<string> DeleteStudent(int id)
@@ -98,8 +97,11 @@ namespace ServerForReact.Services
                 student.Surname = model.Surname;
                 student.PhoneNumber = model.Phone;
                 student.Age = model.Age;
-                PhotoHelper.DeletePhoto(student.Photo);
-                student.Photo = PhotoHelper.AddPhoto(model.Photo);
+                if (model.Photo != null)
+                {
+                    PhotoHelper.DeletePhoto(student.Photo);
+                    student.Photo = PhotoHelper.AddPhoto(model.Photo);
+                }
                 await userManager.UpdateAsync(student);
                 return student;
             }

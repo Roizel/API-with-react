@@ -21,10 +21,10 @@ namespace ServerForReact.Controllers
     {
         private readonly UserManager<AppUser> userManager;
         private readonly FacebookService fb;
-        public FacebookAuthenticationController(UserManager<AppUser> _userManager, FacebookService _fb)
+        public FacebookAuthenticationController(UserManager<AppUser> userManager, FacebookService fb)
         {
-            fb = _fb;
-            userManager = _userManager;
+            this.fb = fb;
+            this.userManager = userManager;
         }
 
         [HttpPost]

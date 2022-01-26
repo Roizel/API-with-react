@@ -13,9 +13,9 @@ namespace ServerForReact.Services
     {
         private readonly IConfiguration configuration;
 
-        public EmailService(IConfiguration _configuration)
+        public EmailService(IConfiguration configuration)
         {
-            configuration = _configuration;
+            this.configuration = configuration;
         }
 
         public async Task SendEmailAsync(string email, string subject, string message)

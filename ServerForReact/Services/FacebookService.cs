@@ -18,24 +18,24 @@ namespace ServerForReact.Services
 {
     public class FacebookService : IFacebookService
     {
-        private readonly HttpClient _httpClient;
+        private readonly HttpClient httpClient;
         private readonly UserManager<AppUser> userManager;
         private readonly IMapper mapper;
         private readonly ILogger<FacebookService> logger;
         private readonly IJwtTokenService jwtTokenService;
 
-        public FacebookService(UserManager<AppUser> _userManager, IMapper _mapper, ILogger<FacebookService> _logger, IJwtTokenService _jwtTokenService)
+        public FacebookService(UserManager<AppUser> userManager, IMapper mapper, ILogger<FacebookService> logger, IJwtTokenService jwtTokenService)
         {
-            jwtTokenService = _jwtTokenService;
-            userManager = _userManager;
-            mapper = _mapper;
-            logger = _logger;
+            this.jwtTokenService = jwtTokenService;
+            this.userManager = userManager;
+            this.mapper = mapper;
+            this.logger = logger;
 
-            _httpClient = new HttpClient
+            httpClient = new HttpClient
             {
                 BaseAddress = new Uri("https://graph.facebook.com/v2.8/")
             };
-            _httpClient.DefaultRequestHeaders
+            httpClient.DefaultRequestHeaders
                 .Accept
                 .Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
@@ -125,7 +125,7 @@ namespace ServerForReact.Services
 
         private async Task<T> GetAsync<T>(string accessToken, string endpoint, string args = null)
         {
-            var response = await _httpClient.GetAsync($"{endpoint}?access_token={accessToken}&{args}");
+            var response = await httpClient.GetAsync($"{endpoint}?access_token={accessToken}&{args}");
             if (!response.IsSuccessStatusCode)
                 return default(T);
 

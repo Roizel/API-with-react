@@ -32,16 +32,16 @@ namespace ServerForReact.Controllers
         private readonly IEmailService emailService;
         private readonly IEmailSenderService emailSenderService;
 
-        public AccountController(IStudentService _studentService, UserManager<AppUser> _userManager,
-            IJwtTokenService _tokenService, IMapper _mapper, ILogger<AccountController> _logger, IEmailService _emailService,
-            IEmailSenderService _emailSenderService)
+        public AccountController(IStudentService studentService, UserManager<AppUser> userManager,
+            IJwtTokenService tokenService, IMapper mapper, ILogger<AccountController> logger, IEmailService emailService,
+            IEmailSenderService emailSenderService)
         {
-            mapper = _mapper;
-            studentService = _studentService;
-            userManager = _userManager;
-            logger = _logger;
-            emailService = _emailService;
-            emailSenderService = _emailSenderService;
+            this.mapper = mapper;
+            this.studentService = studentService;
+            this.userManager = userManager;
+            this.logger = logger;
+            this.emailService = emailService;
+            this.emailSenderService = emailSenderService;
         }
 
         [HttpPost("register")]

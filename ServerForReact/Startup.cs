@@ -17,7 +17,6 @@ using NLog;
 using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Identity;
-using ServerForReact.Extensions;
 using ServerForReact.Mapper;
 using ServerForReact.Services;
 using System;
@@ -34,6 +33,8 @@ using ServerForReact.Controllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Facebook;
+using ServerForReact.Pagination;
+using ServerForReact.Extensions;
 
 namespace ServerForReact
 {
@@ -64,11 +65,12 @@ namespace ServerForReact
             services.AddFluentValidation(x =>
               x.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddControllers()
-                .AddNewtonsoftJson(options => /*Send data to fronetend with Camelcase(Email = email, Loh = loh etc.)*/
+                .AddNewtonsoftJson(options =>
                 {
                     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                     options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Include;
                     options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                    //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Serialize; //якщо щось не так з JSON то видали цю строчку кода, в н≥й шось не так
                 });
             services.AddSwaggerGen(c =>
             {
@@ -83,13 +85,16 @@ namespace ServerForReact
                     .UseSQLiteStorage(Configuration.GetConnectionString("HangfireConnection")));
             services.AddHangfireServer();
 
-
+            #region DI
             services.AddScoped<IJwtTokenService, JwtTokenServices>();
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IEmailSenderService, EmailSenderService>();
             services.AddScoped<FacebookService>();
+            services.AddScoped<CoursePagination>();
+            services.AddScoped<StudentPagination>();
+            #endregion
             var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<String>("JwtKey")));
 
             services.AddAuthentication(options =>
@@ -115,7 +120,7 @@ namespace ServerForReact
         }
 
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager, IEmailService emailService)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager)
         {
             app.UseCors(options =>
              options.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());

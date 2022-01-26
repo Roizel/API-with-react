@@ -13,9 +13,9 @@ namespace ServerForReact.Validators
     public class ValidatorLoginViewModel : AbstractValidator<LoginViewModel>
     {
         private readonly IStudentService studentService;
-        public ValidatorLoginViewModel(IStudentService _studentService)
+        public ValidatorLoginViewModel(IStudentService studentService)
         {
-            studentService = _studentService;
+            this.studentService = studentService;
             RuleFor(x => x.Email)
                 .NotEmpty().WithMessage("The Email field is required!")
                 .EmailAddress().WithMessage("Email is incorrect!")

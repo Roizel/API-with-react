@@ -14,10 +14,10 @@ namespace ServerForReact.CustomExceptionMiddleware
     {
         private readonly RequestDelegate next;
         private readonly ILogger<ExceptionMiddleware> logger;
-        public ExceptionMiddleware(RequestDelegate _next, ILogger<ExceptionMiddleware> _logger)
+        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
         {
-            next = _next;
-            logger = _logger;
+            this.next = next;
+            this.logger = logger;
         }
 
         public async Task InvokeAsync(HttpContext httpContext)
@@ -28,12 +28,12 @@ namespace ServerForReact.CustomExceptionMiddleware
             }
             catch (Exception ex)
             {
-                logger.LogError(ex.Message, "Smth went wrong");
-                await HandleExceptionAsync(httpContext);
+                logger.LogError("Critical Error:",ex.Message);
+                await HandleExceptionAsync(httpContext, ex);
             }
         }
 
-        private Task HandleExceptionAsync(HttpContext context)
+        private Task HandleExceptionAsync(HttpContext context, Exception ex)
         {
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
@@ -41,7 +41,7 @@ namespace ServerForReact.CustomExceptionMiddleware
             return context.Response.WriteAsync(new ErrorDetails
             {
                 StatusCode = context.Response.StatusCode,
-                Message = "Internal Server Error from the custom middleware."
+                Message = $"Error: {ex.Message}"
             }.ToString());
         }
     }

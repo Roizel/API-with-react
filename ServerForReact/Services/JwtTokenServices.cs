@@ -22,11 +22,11 @@ namespace ServerForReact.Services
         private readonly IConfiguration configuration;
         private readonly UserManager<AppUser> userManager;
 
-        public JwtTokenServices(IConfiguration _configuration,
-            UserManager<AppUser> _userManager)
+        public JwtTokenServices(IConfiguration configuration,
+            UserManager<AppUser> userManager)
         {
-            configuration = _configuration;
-            userManager = _userManager;
+            this.configuration = configuration;
+            this.userManager = userManager;
         }
 
         public string CreateToken(AppUser user)

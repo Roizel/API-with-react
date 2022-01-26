@@ -14,11 +14,11 @@ namespace ServerForReact.Services
         private readonly IJwtTokenService tokenService;
         private readonly UserManager<AppUser> userManager;
 
-        public AccountService(FacebookService _fb, IJwtTokenService _tokenService, UserManager<AppUser> _userManager)
+        public AccountService(FacebookService fb, IJwtTokenService tokenService, UserManager<AppUser> userManager)
         {
-            fb = _fb;
-            tokenService = _tokenService;
-            userManager = _userManager;
+            this.fb = fb;
+            this.tokenService = tokenService;
+            this.userManager = userManager;
         }
 
         public async Task<FacebookUserResource> FacebookGetDataAsync(FacebookLoginResource facebookLoginResource)

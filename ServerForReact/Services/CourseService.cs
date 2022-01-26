@@ -8,7 +8,6 @@ using ServerForReact.Abstract;
 using ServerForReact.Data;
 using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
-using ServerForReact.Exceptions;
 using ServerForReact.Helpers;
 using ServerForReact.Models;
 using System;
@@ -25,12 +24,12 @@ namespace ServerForReact.Services
         private readonly UserManager<AppUser> userManager;
         private readonly IMapper mapper;
         private readonly ILogger<CourseService> logger;
-        public CourseService(AppEFContext _context, IMapper _mapper, UserManager<AppUser> _userManager, ILogger<CourseService> _logger)
+        public CourseService(AppEFContext context, IMapper mapper, UserManager<AppUser> userManager, ILogger<CourseService> logger)
         {
-            userManager = _userManager;
-            mapper = _mapper;
-            context = _context;
-            logger = _logger;
+            this.userManager = userManager;
+            this.mapper = mapper;
+            this.context = context;
+            this.logger = logger;
         }
 
         public async Task<Courses> CreateCourse(CreateCourseViewModel model)
@@ -69,8 +68,11 @@ namespace ServerForReact.Services
                 course.Description = model.Description;
                 course.Duration = model.Duration;
                 course.StartCourse = model.StartCourse;
-                PhotoHelper.DeletePhoto(course.PathImg);
-                course.PathImg = PhotoHelper.AddPhoto(model.Photo);
+                if (model.Photo != null)
+                {
+                    PhotoHelper.DeletePhoto(course.PathImg);
+                    course.PathImg = PhotoHelper.AddPhoto(model.Photo);
+                }
                 context.Entry(course).State = EntityState.Modified;
                 await context.SaveChangesAsync();
                 return course;
