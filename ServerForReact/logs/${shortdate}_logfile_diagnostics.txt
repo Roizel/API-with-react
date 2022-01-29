@@ -2394,3 +2394,136 @@
 2022-01-26 17:03:00.3805 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
 2022-01-26 17:03:00.3805 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
 2022-01-26 17:03:00.4188 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 15:21:31.8421 Info Message Template Auto Format enabled
+2022-01-27 15:21:31.8863 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 15:21:31.9355 Info Adding target FileTarget(Name=allfile)
+2022-01-27 15:21:31.9355 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 15:21:31.9439 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 15:21:31.9439 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 15:21:31.9785 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 15:39:27.0909 Info Message Template Auto Format enabled
+2022-01-27 15:39:27.1060 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 15:39:27.1537 Info Adding target FileTarget(Name=allfile)
+2022-01-27 15:39:27.1537 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 15:39:27.1537 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 15:39:27.1537 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 15:39:27.2110 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 15:43:18.4945 Info Message Template Auto Format enabled
+2022-01-27 15:43:18.5269 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 15:43:18.5911 Info Adding target FileTarget(Name=allfile)
+2022-01-27 15:43:18.5911 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 15:43:18.5911 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 15:43:18.6056 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 15:43:18.6670 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 15:43:37.2376 Info Message Template Auto Format enabled
+2022-01-27 15:43:37.2641 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 15:43:37.3450 Info Adding target FileTarget(Name=allfile)
+2022-01-27 15:43:37.3450 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 15:43:37.3622 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 15:43:37.3622 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 15:43:37.4116 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 16:53:33.0956 Info Message Template Auto Format enabled
+2022-01-27 16:53:33.1197 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 16:53:33.1722 Info Adding target FileTarget(Name=allfile)
+2022-01-27 16:53:33.1722 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 16:53:33.1722 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 16:53:33.1722 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 16:53:33.2146 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 16:55:11.5815 Info Message Template Auto Format enabled
+2022-01-27 16:55:11.6194 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 16:55:11.6801 Info Adding target FileTarget(Name=allfile)
+2022-01-27 16:55:11.6801 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 16:55:11.7019 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 16:55:11.7019 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 16:55:11.7743 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 17:16:47.7511 Info Message Template Auto Format enabled
+2022-01-27 17:16:47.8086 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 17:16:47.8811 Info Adding target FileTarget(Name=allfile)
+2022-01-27 17:16:47.8811 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 17:16:47.8811 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 17:16:47.8811 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 17:16:47.9144 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 20:32:39.2232 Info Message Template Auto Format enabled
+2022-01-27 20:32:39.2371 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 20:32:39.2801 Info Adding target FileTarget(Name=allfile)
+2022-01-27 20:32:39.2801 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 20:32:39.2801 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 20:32:39.2801 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 20:32:39.3176 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 20:51:41.8860 Info Message Template Auto Format enabled
+2022-01-27 20:51:41.9041 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 20:51:41.9535 Info Adding target FileTarget(Name=allfile)
+2022-01-27 20:51:41.9657 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 20:51:41.9657 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 20:51:41.9657 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 20:51:42.0070 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 20:53:50.4431 Info Message Template Auto Format enabled
+2022-01-27 20:53:50.4603 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 20:53:50.5563 Info Adding target FileTarget(Name=allfile)
+2022-01-27 20:53:50.5563 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 20:53:50.5649 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 20:53:50.5649 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 20:53:50.6112 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 20:56:32.7800 Info Message Template Auto Format enabled
+2022-01-27 20:56:32.7945 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 20:56:32.8349 Info Adding target FileTarget(Name=allfile)
+2022-01-27 20:56:32.8349 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 20:56:32.8427 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 20:56:32.8427 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 20:56:32.8714 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 20:56:47.6323 Info Message Template Auto Format enabled
+2022-01-27 20:56:47.6499 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 20:56:47.7135 Info Adding target FileTarget(Name=allfile)
+2022-01-27 20:56:47.7135 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 20:56:47.7223 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 20:56:47.7223 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 20:56:47.7487 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 21:16:39.2276 Info Message Template Auto Format enabled
+2022-01-27 21:16:39.2481 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 21:16:39.2946 Info Adding target FileTarget(Name=allfile)
+2022-01-27 21:16:39.2946 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 21:16:39.2946 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 21:16:39.2946 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 21:16:39.3341 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-27 21:19:24.2692 Info Message Template Auto Format enabled
+2022-01-27 21:19:24.2821 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-27 21:19:24.3324 Info Adding target FileTarget(Name=allfile)
+2022-01-27 21:19:24.3324 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-27 21:19:24.3421 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-27 21:19:24.3421 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-27 21:19:24.3680 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-29 16:40:33.3999 Info Message Template Auto Format enabled
+2022-01-29 16:40:33.4176 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-29 16:40:33.4615 Info Adding target FileTarget(Name=allfile)
+2022-01-29 16:40:33.4615 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-29 16:40:33.4615 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-29 16:40:33.4724 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-29 16:40:33.5001 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-29 16:46:26.3621 Info Message Template Auto Format enabled
+2022-01-29 16:46:26.3621 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-29 16:46:26.4171 Info Adding target FileTarget(Name=allfile)
+2022-01-29 16:46:26.4171 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-29 16:46:26.4171 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-29 16:46:26.4257 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-29 16:46:26.4531 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-29 17:25:04.6860 Info Message Template Auto Format enabled
+2022-01-29 17:25:04.7088 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-29 17:25:04.7738 Info Adding target FileTarget(Name=allfile)
+2022-01-29 17:25:04.7738 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-29 17:25:04.7839 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-29 17:25:04.7839 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-29 17:25:04.8125 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-29 17:28:28.1280 Info Message Template Auto Format enabled
+2022-01-29 17:28:28.1280 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-29 17:28:28.1847 Info Adding target FileTarget(Name=allfile)
+2022-01-29 17:28:28.1847 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-29 17:28:28.1923 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-29 17:28:28.1923 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-29 17:28:28.2191 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config
+2022-01-29 17:30:57.5245 Info Message Template Auto Format enabled
+2022-01-29 17:30:57.5445 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-29 17:30:57.5915 Info Adding target FileTarget(Name=allfile)
+2022-01-29 17:30:57.5915 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-01-29 17:30:57.6080 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-01-29 17:30:57.6080 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-01-29 17:30:57.6990 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=31, FilePath=C:\Users\sasha\source\repos\ServerForReact\ServerForReact\bin\Debug\net5.0\NLog.config

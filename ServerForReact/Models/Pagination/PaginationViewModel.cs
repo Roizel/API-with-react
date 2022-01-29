@@ -7,11 +7,9 @@ namespace ServerForReact.Models.Pagination
 {
     public class CoursePaginationViewModel
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Duration { get; set; }
-        public string StartCourse { get; set; }
+        public string SearchWord { get; set; }
+        public string Sort { get; set; }
+        public string TypeOfSort { get; set; }
         public int Page { get; set; } = 1;
     }
 
@@ -26,6 +24,8 @@ namespace ServerForReact.Models.Pagination
     public class StudentPaginationViewModel
     {
         public string SearchWord { get; set; }
+        public string Sort { get; set; }
+        public string TypeOfSort { get; set; }
         public int Page { get; set; } = 1;
     }
 

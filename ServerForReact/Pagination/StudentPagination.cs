@@ -48,7 +48,7 @@ namespace ServerForReact.Pagination
 
             return Task.FromResult(res);
         }
-        public Task<StudentPaginationResultViewModel> UserSorting(StudentPaginationViewModel search)
+        public Task<StudentPaginationResultViewModel> UsersSorting(StudentPaginationViewModel search)
         {
             int page = search.Page;
             int pageSize = 10;
@@ -62,6 +62,36 @@ namespace ServerForReact.Pagination
                     || x.Surname.ToLower().Contains(search.SearchWord.ToLower())
                     || x.Email.ToLower().Contains(search.SearchWord.ToLower())
                     || x.PhoneNumber.Contains(search.SearchWord.ToString()));
+            }
+            if (search.TypeOfSort == "ascend")
+            {
+                if (search.Sort == "name")
+                {
+                    query = query.OrderBy(x => x.UserName);
+                }
+                if (search.Sort == "id")
+                {
+                    query = query.OrderBy(x => x.Id);
+                }
+                if (search.Sort == "age")
+                {
+                    query = query.OrderBy(x => x.Age);
+                }
+            }
+            if (search.TypeOfSort == "descend")
+            {
+                if (search.Sort == "name")
+                {
+                    query = query.OrderByDescending(x => x.UserName);
+                }
+                if (search.Sort == "id")
+                {
+                    query = query.OrderByDescending(x => x.Id);
+                }
+                if (search.Sort == "age")
+                {
+                    query = query.OrderByDescending(x => x.Age);
+                }
             }
 
             var model = query

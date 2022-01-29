@@ -20,43 +20,76 @@ namespace ServerForReact.Pagination
             this.context = context;
             this.mapper = mapper;
         }
-        public DbSet<Courses> All()
+        public Task<CoursePaginationResultViewModel> All()
         {
-            var list = context.Courses;
-            return list;
-        }
-        public Task<CoursePaginationResultViewModel> Query(CoursePaginationViewModel search)
-        {
-            int page = search.Page;
-            int pageSize = 8;
+            int page = 1;
+            int pageSize = 10;
             var query = context.Courses
                 .AsQueryable();
 
-            if (!string.IsNullOrEmpty(search.Id))
+            var model = query
+               .Skip((page - 1) * pageSize)
+               .Take(pageSize)
+               .Select(x => mapper.Map<CourseItemViewModel>(x))
+               .ToList();
+
+            int total = query.Count();
+            int pages = (int)Math.Ceiling(total / (double)pageSize);
+            CoursePaginationResultViewModel res = new CoursePaginationResultViewModel
             {
-                int id = int.Parse(search.Id);
-                query = query.Where(x => x.Id == id);
+                Courses = model,
+                Total = total,
+                CurrentPage = 1,
+                Pages = pages
+            };
+            return Task.FromResult(res);
+        }
+
+        public Task<CoursePaginationResultViewModel> CoursesSorting(CoursePaginationViewModel search)
+        {
+            int page = search.Page;
+            int pageSize = 10;
+            var query = context.Courses
+                .AsQueryable();
+
+            if (search.SearchWord != null)
+            {
+                query = query.Where(
+                    x => x.Name.ToLower().Contains(search.SearchWord.ToLower())
+                    || x.Description.ToLower().Contains(search.SearchWord.ToLower())
+                    || x.Duration.ToLower().Contains(search.SearchWord.ToLower()));
             }
 
-            if (!string.IsNullOrEmpty(search.Name))
+            if (search.TypeOfSort == "ascend")
             {
-                query = query.Where(x => x.Name.ToLower().Contains(search.Name.ToLower()));
+                if (search.Sort == "name")
+                {
+                    query = query.OrderBy(x => x.Name);
+                }
+                if (search.Sort == "id")
+                {
+                    query = query.OrderBy(x => x.Id);
+                }
+                if (search.Sort == "duration")
+                {
+                    query = query.OrderBy(x => x.Duration);
+                }
             }
-
-            if (!string.IsNullOrEmpty(search.Description))
+            if (search.TypeOfSort == "descend")
             {
-                query = query.Where(x => x.Description.ToLower().Contains(search.Description.ToLower()));
+                if (search.Sort == "name")
+                {
+                    query = query.OrderByDescending(x => x.Name);
+                }
+                if (search.Sort == "id")
+                {
+                    query = query.OrderByDescending(x => x.Id);
+                }
+                if (search.Sort == "duration")
+                {
+                    query = query.OrderByDescending(x => x.Duration);
+                }
             }
-
-            if (!string.IsNullOrEmpty(search.Duration))
-            {
-                query = query.Where(x => x.Duration.ToLower().Contains(search.Duration.ToLower()));
-            }
-
-            //if (!string.IsNullOrEmpty(search.StartCourse))
-            //{
-            //    query = query.Where(x => x.StartCourse.ToString().Contains(search.StartCourse));
-            //}
 
             var model = query
                 .Skip((page - 1) * pageSize)
@@ -70,12 +103,12 @@ namespace ServerForReact.Pagination
             {
                 Courses = model,
                 Total = total,
-                CurrentPage = page,
+                CurrentPage = 1,
                 Pages = pages
             };
 
             return Task.FromResult(res);
-        }
 
+        }
     }
 }

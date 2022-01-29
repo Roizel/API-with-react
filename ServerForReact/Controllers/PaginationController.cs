@@ -21,6 +21,13 @@ namespace ServerForReact.Controllers
             this.StudentPg = StudentPg;
         }
 
+        [Route("allcourses")]
+        [HttpGet]
+        public IActionResult GetCourses()
+        {
+            return Ok(CoursePg.All());
+        }
+
         [Route("allstudents")]
         [HttpGet]
         public IActionResult GetStudents()
@@ -29,16 +36,16 @@ namespace ServerForReact.Controllers
         }
 
         [HttpPost("coursepagination")]
-        public IActionResult SortCourses([FromQuery] CoursePaginationViewModel model)
+        public IActionResult SortCourses([FromForm] CoursePaginationViewModel model)
         {
-            var res = CoursePg.Query(model);
+            var res = CoursePg.CoursesSorting(model);
             return Ok(res);
         }
 
         [HttpPost("studentpagination")]
         public IActionResult SortStudents([FromForm] StudentPaginationViewModel model)
         {
-            var res = StudentPg.UserSorting(model);
+            var res = StudentPg.UsersSorting(model);
             return Ok(res);
         }
     }

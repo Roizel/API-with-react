@@ -40,12 +40,6 @@ namespace ServerForReact.Data
                     .WithMany(r => r.UserRoles)
                     .HasForeignKey(ur => ur.UserId)
                     .IsRequired();
-
-                //builder.Entity<StudentCourses>().HasKey(table => new {
-                //    table.StudentId,
-                //    table.CourseId,
-                //    table.Id
-                //});
             });
         }
 
