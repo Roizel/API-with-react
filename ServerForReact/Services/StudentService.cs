@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using NLog;
 using ServerForReact.Abstract;
+using ServerForReact.Abstract.AbstractHangfire;
 using ServerForReact.Data;
+using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
 using ServerForReact.Helpers;
 using ServerForReact.Models;
@@ -25,8 +27,9 @@ namespace ServerForReact.Services
         private readonly AppEFContext context;
         private readonly IEmailService emailService;
         private readonly ILogger<StudentService> logger;
+        private readonly IHangfireService hangfireService;
         public StudentService(UserManager<AppUser> userManager, IJwtTokenService jwtTokenService,IMapper mapper,
-            AppEFContext context, IEmailService emailService, ILogger<StudentService> logger)
+            AppEFContext context, IEmailService emailService, ILogger<StudentService> logger, IHangfireService hangfireService)
         {
             this.mapper = mapper;
             this.userManager = userManager;
@@ -34,6 +37,7 @@ namespace ServerForReact.Services
             this.context = context;
             this.emailService = emailService;
             this.logger = logger;
+            this.hangfireService = hangfireService;
         }
 
         public async Task<(string token, AppUser student)> CreateStudent(RegisterViewModel model)
@@ -109,6 +113,19 @@ namespace ServerForReact.Services
             {
                 return null;
             }
+        }
+
+        public void Test()
+        {
+            StudentCourses subs = new StudentCourses();
+            subs.CourseId = 6;
+            subs.StudentId = 2;
+            subs.JoinCourse = DateTime.Now;
+
+            var student = context.Users.SingleOrDefault(x => x.Id == subs.StudentId);
+            var course = context.Courses.SingleOrDefault(x => x.Id == subs.CourseId);
+
+            hangfireService.SetCourseNotifications(subs, student, course);
         }
 
         public bool IsEmailExistRegister(string email)

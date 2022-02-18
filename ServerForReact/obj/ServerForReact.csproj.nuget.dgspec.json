@@ -68,9 +68,9 @@
               "target": "Package",
               "version": "[1.4.2, )"
             },
-            "MailKit": {
+            "Hangfire.SqlServer": {
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[1.7.28, )"
             },
             "Microsoft.AspNetCore.Authentication.Facebook": {
               "target": "Package",
@@ -87,6 +87,10 @@
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
@@ -109,6 +113,10 @@
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.14.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.25.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

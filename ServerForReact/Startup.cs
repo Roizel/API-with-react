@@ -28,13 +28,16 @@ using System.Threading.Tasks;
 using NLog.Extensions.Logging;
 using NLog.Web;
 using Hangfire;
-using Hangfire.SQLite;
 using ServerForReact.Controllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Facebook;
 using ServerForReact.Pagination;
 using ServerForReact.Extensions;
+using ServerForReact.Abstract.AbstractHangfire;
+using ServerForReact.Services.HangfireServices;
+using Hangfire.SqlServer;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace ServerForReact
 {
@@ -51,7 +54,7 @@ namespace ServerForReact
         {
             services.AddCors();
             services.AddDbContext<AppEFContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<AppUser, AppRole>(options =>
             {
                 options.Password.RequireDigit = false;
@@ -70,7 +73,6 @@ namespace ServerForReact
                     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                     options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Include;
                     options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-                    //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Serialize; //якщо щось не так з JSON то видали цю строчку кода, в н≥й шось не так
                 });
             services.AddSwaggerGen(c =>
             {
@@ -79,21 +81,33 @@ namespace ServerForReact
             services.AddAutoMapper(typeof(AppMapProfile));
 
             services.AddHangfire(configuration => configuration
-                    .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
-                    .UseSimpleAssemblyNameTypeSerializer()
-                    .UseRecommendedSerializerSettings()
-                    .UseSQLiteStorage(Configuration.GetConnectionString("HangfireConnection")));
+                     .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                     .UseSimpleAssemblyNameTypeSerializer()
+                     .UseRecommendedSerializerSettings()
+                     .UseSqlServerStorage(Configuration.GetConnectionString("HangfireConnection"), new SqlServerStorageOptions
+                     {
+                         CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+                         SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+                         QueuePollInterval = TimeSpan.Zero,
+                         UseRecommendedIsolationLevel = true,
+                         DisableGlobalLocks = true
+                     }));
             services.AddHangfireServer();
+            services.AddControllersWithViews(); /*For Views. IRazorViewEngine etc...*/
+            services.AddRazorPages();
 
             #region DI
             services.AddScoped<IJwtTokenService, JwtTokenServices>();
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IEmailService, EmailService>();
-            services.AddScoped<IEmailSenderService, EmailSenderService>();
+            services.AddScoped<IHangfireService, HangfireService>();
+            services.AddScoped<IHangfireCommands, HangfireCommands>();
+            services.AddScoped<IViewsHelper, ViewsHelper>();
             services.AddScoped<FacebookService>();
             services.AddScoped<CoursePagination>();
             services.AddScoped<StudentPagination>();
+            services.AddScoped<CourseSubsPagination>();
             #endregion
             var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<String>("JwtKey")));
 

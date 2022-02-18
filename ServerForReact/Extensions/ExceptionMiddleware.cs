@@ -28,7 +28,7 @@ namespace ServerForReact.CustomExceptionMiddleware
             }
             catch (Exception ex)
             {
-                logger.LogError("Critical Error:",ex.Message);
+                logger.LogError("Critical Error:" + ex.Message);
                 await HandleExceptionAsync(httpContext, ex);
             }
         }

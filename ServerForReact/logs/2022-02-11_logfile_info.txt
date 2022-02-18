@@ -1,0 +1,414 @@
+2022-02-11 13:44:29.9750|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 13:44:31.6930|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 13:44:31.7743|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 13:44:31.8657|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 13:44:31.8657|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 13:44:32.1693|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:9532:3d317e69 successfully announced in 267,0742 ms 
+2022-02-11 13:44:32.1693|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:9532:3d317e69 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 13:44:32.2079|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-11 13:44:32.2994|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:9532:3d317e69 all the dispatchers started 
+2022-02-11 13:44:33.2416|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 13:44:33.2416|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 13:44:33.2691|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 13:58:05.7159|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 13:58:06.5546|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 13:58:06.6219|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 13:58:06.6846|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 13:58:06.6846|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 13:58:06.9446|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:5384:2f3986d7 successfully announced in 232,0338 ms 
+2022-02-11 13:58:06.9446|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:5384:2f3986d7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 13:58:06.9700|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-11 13:58:07.0754|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:5384:2f3986d7 all the dispatchers started 
+2022-02-11 13:58:07.9235|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 13:58:07.9316|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 13:58:07.9316|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 14:07:48.6425|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 14:07:49.4664|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 14:07:49.5305|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 14:07:49.5937|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 14:07:49.5937|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 14:07:49.9588|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15240:2441d1ef successfully announced in 333,9583 ms 
+2022-02-11 14:07:49.9588|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15240:2441d1ef is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 14:07:49.9815|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-11 14:07:50.0801|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:15240:2441d1ef all the dispatchers started 
+2022-02-11 14:07:50.9277|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 14:07:50.9277|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 14:07:50.9277|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 14:09:20.3670|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 14:09:21.1657|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 14:09:21.2329|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 14:09:21.2914|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 14:09:21.2914|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 14:09:21.6132|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:1816:feb6043d successfully announced in 288,7381 ms 
+2022-02-11 14:09:21.6198|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:1816:feb6043d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 14:09:21.7075|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:1816:feb6043d all the dispatchers started 
+2022-02-11 14:09:22.5459|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 14:09:22.5529|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 14:09:22.5529|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 14:14:22.8297|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 14:14:23.6529|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 14:14:23.7200|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 14:14:23.7820|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 14:14:23.7820|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 14:14:24.0653|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8628:05e0fa8d successfully announced in 249,4 ms 
+2022-02-11 14:14:24.0725|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8628:05e0fa8d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 14:14:24.0942|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-11 14:14:24.1674|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:8628:05e0fa8d all the dispatchers started 
+2022-02-11 14:14:25.1960|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 14:14:25.2218|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 14:14:25.2259|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 14:16:26.4410|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '67': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:30. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). a11sm3196050ljj.124 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 14:16:26.4457|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '67': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:21. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). i126sm2202620lji.17 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 14:16:26.4457|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '67': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:33. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). z8sm3177119ljn.89 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 14:16:26.4457|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '67': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:26. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). g19sm3211448ljm.135 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 14:16:26.4457|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '67': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:41. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). x12sm3204112lji.57 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 14:16:26.4457|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '67': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:37. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). e11sm1283419lfr.194 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:27:32.3328|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 16:27:54.2619|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 16:27:55.0319|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 16:27:55.1032|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 16:27:55.1633|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 16:27:55.1633|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 16:27:55.4523|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10104:f08f4fcb successfully announced in 263,3589 ms 
+2022-02-11 16:27:55.4590|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10104:f08f4fcb is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 16:27:55.4590|0|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout 
+2022-02-11 16:27:55.5718|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10104:f08f4fcb all the dispatchers started 
+2022-02-11 16:27:56.4247|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 16:27:56.4288|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 16:27:56.4288|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 16:29:08.6311|0|ERROR|ServerForReact.CustomExceptionMiddleware.ExceptionMiddleware|Critical Error:The client has disconnected 
+2022-02-11 16:40:45.9421|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 16:40:46.6958|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 16:40:46.7604|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 16:40:46.8175|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 16:40:46.8182|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 16:40:47.1679|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10104:ef0e7337 successfully announced in 323,0876 ms 
+2022-02-11 16:40:47.1679|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10104:ef0e7337 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 16:40:47.2100|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-11 16:40:47.3194|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10104:ef0e7337 all the dispatchers started 
+2022-02-11 16:40:48.1626|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 16:40:48.1626|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 16:40:48.1626|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 16:41:01.3669|0|ERROR|ServerForReact.CustomExceptionMiddleware.ExceptionMiddleware|Critical Error:The client has disconnected 
+2022-02-11 16:41:33.6979|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:37. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). w2sm3137891lfu.268 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:41:33.7092|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:31. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). f22sm3142539lfc.149 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:41:33.6979|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:38. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). m26sm3156068lfo.62 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:41:33.6979|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:23. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). a17sm1666613lfs.35 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:41:33.7092|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:26. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). d9sm3145178lfi.255 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:41:33.7092|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:23. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). u13sm3152359lfs.260 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:41:33.6979|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:17. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). r1sm3233753ljj.9 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:41:33.6979|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:34. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). r4sm3157544lfi.115 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:54:07.7355|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 16:54:08.5415|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 16:54:08.6083|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 16:54:08.6691|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 16:54:08.6691|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 16:54:08.9346|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:5824:165883c6 successfully announced in 239,1805 ms 
+2022-02-11 16:54:08.9346|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:5824:165883c6 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 16:54:08.9572|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-11 16:54:09.0771|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:5824:165883c6 all the dispatchers started 
+2022-02-11 16:54:09.9552|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 16:54:09.9619|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 16:54:09.9619|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 16:54:25.5396|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:04. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). 18sm24275lfz.286 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 36
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-02-11 16:54:25.5396|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:19. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). g18sm1380782lfv.207 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 36
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-02-11 16:54:25.5396|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:07. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). u14sm3218223lji.40 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 36
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-02-11 16:54:25.5396|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:25. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). g18sm3141581lfe.284 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 36
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-02-11 16:54:25.5396|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:34. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). k17sm2075283lfu.301 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 36
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-02-11 16:54:25.5396|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:52. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). y7sm3116047ljc.65 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 36
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-02-11 16:54:25.5518|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:34. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). s18sm3215853ljs.115 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 36
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-02-11 16:54:25.5518|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:43. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). i22sm1420961lfr.63 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 36
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+2022-02-11 16:56:48.9538|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 16:56:50.9136|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 16:56:50.9704|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 16:56:51.0234|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 16:56:51.0234|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 16:56:51.3262|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:7412:ff0532da successfully announced in 276,853 ms 
+2022-02-11 16:56:51.3335|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:7412:ff0532da is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 16:56:51.4216|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:7412:ff0532da all the dispatchers started 
+2022-02-11 16:56:52.2694|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 16:56:52.2815|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 16:56:52.2815|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 16:57:38.0054|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '71': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:24. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). f13sm2225483lfg.98 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:57:38.0054|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '71': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:33. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). u16sm697221lfr.172 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:57:38.0054|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '71': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:43. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). b18sm3221372ljd.56 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:57:38.0258|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '71': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:40. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). h13sm3159242lfv.100 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:57:38.0258|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '71': an exception occurred. Retry attempt 2 of 10 will be performed in 00:01:04. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). h23sm3163886lfv.46 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:57:38.0258|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '71': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:37. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). m12sm3170298lfj.54 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 16:57:38.0258|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '71': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:26. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). g20sm43023lja.50 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 17:07:19.5477|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 17:07:19.8075|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 17:07:19.8400|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 17:07:19.8895|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 17:07:19.8895|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 17:07:20.0557|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3728:f202cc53 successfully announced in 152,6933 ms 
+2022-02-11 17:07:20.0679|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3728:f202cc53 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 17:07:20.0679|0|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout 
+2022-02-11 17:07:20.1185|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3728:f202cc53 all the dispatchers started 
+2022-02-11 17:07:20.8681|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 17:07:20.8681|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 17:07:20.8681|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 17:08:06.2074|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '72': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:26. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). u13sm3159276lfs.260 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 37
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 17:08:38.1968|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-02-11 17:08:38.2137|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3728:f202cc53 caught stopping signal... 
+2022-02-11 17:08:38.2282|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3728:f202cc53 caught stopped signal... 
+2022-02-11 17:08:43.0007|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3728:f202cc53 All dispatchers stopped 
+2022-02-11 17:08:43.0057|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3728:f202cc53 successfully reported itself as stopped in 2,9735 ms 
+2022-02-11 17:08:43.0057|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:3728:f202cc53 has been stopped in total 4790,397 ms 
+2022-02-11 17:21:37.2397|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 17:21:38.1332|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 17:21:38.2108|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 17:21:38.2700|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 17:21:38.2750|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 17:21:38.5547|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:6940:5e6a6148 successfully announced in 248,4226 ms 
+2022-02-11 17:21:38.5547|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:6940:5e6a6148 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 17:21:38.6875|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:6940:5e6a6148 all the dispatchers started 
+2022-02-11 17:21:39.5454|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 17:21:39.5549|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 17:21:39.5549|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 17:35:53.7486|0|DEBUG|ServerForReact.Program|init main 
+2022-02-11 17:35:54.6127|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-11 17:35:54.6877|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-11 17:35:54.7537|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-11 17:35:54.7537|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-11 17:35:55.0538|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10764:7e187d8e successfully announced in 271,8098 ms 
+2022-02-11 17:35:55.0538|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10764:7e187d8e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-11 17:35:55.0817|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-11 17:35:55.2032|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10764:7e187d8e all the dispatchers started 
+2022-02-11 17:35:56.0666|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-11 17:35:56.0757|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-11 17:35:56.0757|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-11 17:36:41.6522|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '75': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:42. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). a6sm3236623ljb.93 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 38
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 17:36:41.6522|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '75': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:19. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). t13sm1451071lfe.237 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 38
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 17:36:41.6522|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '75': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:20. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). b21sm3164267lfb.229 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 38
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 17:36:41.6674|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '75': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:21. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). j29sm3155165lfk.285 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 38
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 17:36:41.6674|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '75': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:42. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). c20sm3156353lfb.129 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 38
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2022-02-11 17:36:41.6799|0|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '75': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:42. MailKit.Net.Smtp.SmtpCommandException: 4.3.0 Temporary System Problem.  Try again later (10). x13sm727707lfr.45 - gsmtp
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at ServerForReact.Services.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Users\sasha\source\repos\ServerForReact\ServerForReact\Services\EmailService.cs:line 38
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)

@@ -1,0 +1,206 @@
+2022-02-18 12:45:28.2669|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 12:45:30.4578|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 12:45:32.4022|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 12:45:32.5097|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 12:45:32.5097|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 12:45:32.5097|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 12:45:32.8598|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:22716:ab4d6567 successfully announced in 315,8429 ms 
+2022-02-18 12:45:32.8664|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:22716:ab4d6567 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 12:45:32.8842|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-18 12:45:33.0545|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:22716:ab4d6567 all the dispatchers started 
+2022-02-18 12:45:34.5601|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 12:45:34.5840|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 12:45:34.5840|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 12:48:47.1373|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 12:48:47.9469|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 12:48:48.2039|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 12:48:48.2670|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 12:48:48.2677|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 12:48:48.2677|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 12:48:48.5049|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:39524:c7a53818 successfully announced in 211,7593 ms 
+2022-02-18 12:48:48.5049|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:39524:c7a53818 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 12:48:48.6431|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:39524:c7a53818 all the dispatchers started 
+2022-02-18 12:48:49.8174|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 12:48:49.8174|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 12:48:49.8174|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 12:49:16.8180|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 12:49:16.8180|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 12:49:52.8177|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 12:49:52.8177|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 12:54:37.3761|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 12:54:38.2480|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 12:54:38.5098|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 12:54:38.5717|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 12:54:38.5717|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 12:54:38.5717|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 12:54:38.8862|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:16224:02a57aa9 successfully announced in 284,8127 ms 
+2022-02-18 12:54:38.8926|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:16224:02a57aa9 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 12:54:38.8926|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-18 12:54:39.0434|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:16224:02a57aa9 all the dispatchers started 
+2022-02-18 12:54:40.1488|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 12:54:40.1488|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 12:54:40.1598|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 12:59:38.9199|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-18 12:59:55.4317|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 12:59:55.4317|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 13:01:08.3585|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 13:01:09.2600|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 13:01:09.5175|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 13:01:09.5772|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 13:01:09.5772|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 13:01:09.5772|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 13:01:09.8291|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:32800:682aab84 successfully announced in 220,1496 ms 
+2022-02-18 13:01:09.8400|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:32800:682aab84 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 13:01:09.9942|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:32800:682aab84 all the dispatchers started 
+2022-02-18 13:01:11.1571|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 13:01:11.1654|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 13:01:11.1654|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 13:03:52.1882|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 13:03:52.1956|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 13:04:07.8794|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 13:04:08.6831|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 13:04:08.9462|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 13:04:09.0031|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 13:04:09.0031|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 13:04:09.0031|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 13:04:09.2449|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11336:bab1e79c successfully announced in 213,437 ms 
+2022-02-18 13:04:09.2449|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11336:bab1e79c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 13:04:09.3696|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:11336:bab1e79c all the dispatchers started 
+2022-02-18 13:04:10.4847|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 13:04:10.4920|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 13:04:10.4920|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 13:05:24.1536|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 13:05:24.1692|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 13:09:09.3368|0|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout 
+2022-02-18 13:12:28.4184|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 13:12:29.2649|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 13:12:29.5144|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 13:12:29.5701|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 13:12:29.5701|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 13:12:29.5701|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 13:12:29.8523|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:43176:667cb73a successfully announced in 247,2908 ms 
+2022-02-18 13:12:29.8523|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:43176:667cb73a is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 13:12:29.9819|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:43176:667cb73a all the dispatchers started 
+2022-02-18 13:12:31.1137|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 13:12:31.1137|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 13:12:31.1294|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 13:12:43.2745|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 13:12:43.2745|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 13:17:29.8827|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-18 15:12:19.9051|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 15:12:20.1489|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 15:12:20.3910|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 15:12:20.4412|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 15:12:20.4412|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 15:12:20.4412|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 15:12:20.5994|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12204:004a54e1 successfully announced in 141,5625 ms 
+2022-02-18 15:12:20.5994|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12204:004a54e1 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 15:12:20.6337|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12204:004a54e1 all the dispatchers started 
+2022-02-18 15:12:21.5360|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 15:12:21.5360|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 15:12:21.5360|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 15:12:34.0409|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:12:34.0409|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:17:20.6261|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-18 15:18:18.2849|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-02-18 15:18:18.2849|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12204:004a54e1 caught stopping signal... 
+2022-02-18 15:18:18.2849|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12204:004a54e1 caught stopped signal... 
+2022-02-18 15:18:18.6298|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12204:004a54e1 All dispatchers stopped 
+2022-02-18 15:18:18.6298|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12204:004a54e1 successfully reported itself as stopped in 2,2925 ms 
+2022-02-18 15:18:18.6298|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:12204:004a54e1 has been stopped in total 343,6954 ms 
+2022-02-18 15:19:02.9253|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 15:19:03.7776|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 15:19:04.0692|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 15:19:04.1272|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 15:19:04.1272|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 15:19:04.1272|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 15:19:04.3844|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14156:3fc2145f successfully announced in 226,6307 ms 
+2022-02-18 15:19:04.3844|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14156:3fc2145f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 15:19:04.5144|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:14156:3fc2145f all the dispatchers started 
+2022-02-18 15:19:05.7615|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 15:19:05.7698|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 15:19:05.7698|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 15:19:22.9511|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:19:22.9591|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:21:33.8160|0|ERROR|ServerForReact.CustomExceptionMiddleware.ExceptionMiddleware|Critical Error:Object reference not set to an instance of an object. 
+2022-02-18 15:22:50.6953|0|ERROR|ServerForReact.CustomExceptionMiddleware.ExceptionMiddleware|Critical Error:Object reference not set to an instance of an object. 
+2022-02-18 15:26:26.8782|0|ERROR|ServerForReact.CustomExceptionMiddleware.ExceptionMiddleware|Critical Error:Object reference not set to an instance of an object. 
+2022-02-18 15:28:55.3235|0|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user. 
+2022-02-18 15:30:06.7139|0|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user. 
+2022-02-18 15:30:09.4065|0|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user. 
+2022-02-18 15:30:19.2023|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:30:19.2023|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:30:56.8315|0|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user. 
+2022-02-18 15:31:01.0746|0|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user. 
+2022-02-18 15:36:43.3807|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 15:36:44.1862|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 15:36:44.3725|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 15:36:44.4343|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 15:36:44.4343|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 15:36:44.4343|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 15:36:44.6807|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:42056:9fdf56f0 successfully announced in 217,576 ms 
+2022-02-18 15:36:44.6807|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:42056:9fdf56f0 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 15:36:44.8551|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:42056:9fdf56f0 all the dispatchers started 
+2022-02-18 15:36:45.9819|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 15:36:45.9889|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 15:36:45.9889|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 15:36:58.0733|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:36:58.0800|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:40:42.7748|0|DEBUG|ServerForReact.Program|init main 
+2022-02-18 15:40:44.2574|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-02-18 15:40:44.4083|0|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-02-18 15:40:44.4745|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: (localdb)\mssqllocaldb@studentdb' 
+2022-02-18 15:40:44.4745|0|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2022-02-18 15:40:44.4745|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-18 15:40:44.7541|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:2096:e46b4f89 successfully announced in 247,9141 ms 
+2022-02-18 15:40:44.7541|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:2096:e46b4f89 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-18 15:40:44.7759|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-18 15:40:44.9438|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:2096:e46b4f89 all the dispatchers started 
+2022-02-18 15:40:46.0937|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-18 15:40:46.1025|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-18 15:40:46.1025|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-18 15:41:03.4878|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:41:03.4878|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:45:44.7944|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-18 15:47:05.1114|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-18 15:47:05.1114|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 

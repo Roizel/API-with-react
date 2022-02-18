@@ -16,5 +16,6 @@ namespace ServerForReact.Abstract
         public bool IsEmailExistRegister(string email);
         public bool IsEmailExistLogin(string email);
         public Task<bool> IsPasswordCorrect(LoginViewModel model); /*Check Password in Validator*/
+        void Test();
     }
 }

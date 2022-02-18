@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NLog;
 using ServerForReact.Abstract;
+using ServerForReact.Abstract.AbstractHangfire;
 using ServerForReact.Data.Identity;
 using ServerForReact.Models;
 using ServerForReact.Services;
@@ -30,18 +31,15 @@ namespace ServerForReact.Controllers
         private readonly IMapper mapper;
         private readonly ILogger<AccountController> logger;
         private readonly IEmailService emailService;
-        private readonly IEmailSenderService emailSenderService;
 
         public AccountController(IStudentService studentService, UserManager<AppUser> userManager,
-            IJwtTokenService tokenService, IMapper mapper, ILogger<AccountController> logger, IEmailService emailService,
-            IEmailSenderService emailSenderService)
+            IJwtTokenService tokenService, IMapper mapper, ILogger<AccountController> logger, IEmailService emailService)
         {
             this.mapper = mapper;
             this.studentService = studentService;
             this.userManager = userManager;
             this.logger = logger;
             this.emailService = emailService;
-            this.emailSenderService = emailSenderService;
         }
 
         [HttpPost("register")]
@@ -125,16 +123,6 @@ namespace ServerForReact.Controllers
             return Ok(new { delete });
         }
 
-        [Route("allstudents")]
-        [HttpGet]
-        public IActionResult GetStudents()
-        {
-            Thread.Sleep(1000);
-            var list = userManager.Users
-                .Select(x => mapper.Map<StudentViewModel>(x))
-                .ToList();
-            return Ok(list);
-        }
         [Route("editstudent/{id}")]
         [HttpGet]
         public IActionResult EditStudent(int id)
@@ -153,22 +141,6 @@ namespace ServerForReact.Controllers
             {
                 return StatusCode(404);
             }
-            return Ok();
-        }
-
-        [Route("Test")]
-        [HttpGet]
-        public IActionResult Test()
-        {
-            //BackgroundJob.Enqueue<IEmailSenderService>(
-            //    x => x.Day());
-            //BackgroundJob.Enqueue<IEmailSenderService>(
-            //    x => x.Week());
-            //BackgroundJob.Enqueue<IEmailSenderService>(
-            //    x => x.Mounth());
-            emailSenderService.Day();
-            //emailSenderService.Week();
-            //emailSenderService.Mounth();
             return Ok();
         }
     }

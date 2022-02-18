@@ -1,7 +1,9 @@
-﻿using MailKit.Net.Smtp;
+﻿using Hangfire;
 using Microsoft.Extensions.Configuration;
-using MimeKit;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 using ServerForReact.Abstract;
+using ServerForReact.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,32 +14,39 @@ namespace ServerForReact.Services
     public class EmailService : IEmailService
     {
         private readonly IConfiguration configuration;
-
-        public EmailService(IConfiguration configuration)
+        private readonly IViewsHelper viewHelper;
+        public EmailService(IConfiguration configuration, IViewsHelper viewHelper)
         {
+            this.viewHelper = viewHelper;
             this.configuration = configuration;
         }
+        public async Task SendCourseStartEmailAsync(string courseTitle, string startIn, string userEmail)
+        {
+            var message = await viewHelper.GetViewToHtmlAsync<CourseItemViewModel>(
+                "EmailSubscribeCourse",
+                new CourseItemViewModel
+                {
+                    Id = 1,
+                    Description = "",
+                    Duration = "",
+                    Name = "",
+                    Photo = "",
+                    StartCourse = ""
+                });
+
+            await SendEmailAsync(userEmail, "Course start", message);
+        }
+
 
         public async Task SendEmailAsync(string email, string subject, string message)
         {
-            var emailMessage = new MimeMessage();
+            var client = new SendGridClient(configuration.GetValue<String>("SendGridKey"));
+            var from = new EmailAddress(configuration.GetValue<String>("Email"), configuration.GetValue<String>("SenderName"));
+            var to = new EmailAddress(email, email);
+            var plainTextContent = "";
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, message);
 
-            emailMessage.From.Add(new MailboxAddress("From Administration", "furermenshiu99@gmail.com"));
-            emailMessage.To.Add(new MailboxAddress("", email));
-            emailMessage.Subject = subject;
-            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
-            {
-                Text = message
-            };
-
-            using (var client = new SmtpClient())
-            {
-                await client.ConnectAsync("smtp.gmail.com", 465, true); /*smtp.gmail.com - gmail server. 465 - port. SSL - true*/
-                await client.AuthenticateAsync(configuration.GetValue<String>("Email"), configuration.GetValue<String>("Password")); /*Email and your password*/
-                await client.SendAsync(emailMessage);
-
-                await client.DisconnectAsync(true);
-            }
+            var result = await client.SendEmailAsync(msg);
         }
     }
 }

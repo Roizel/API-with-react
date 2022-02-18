@@ -1,0 +1,18 @@
+2022-02-01 18:25:16.2598|0|DEBUG|ServerForReact.Program|init main 
+2022-02-01 18:25:18.9608|0|INFO|Hangfire.SQLite.SQLiteStorage|Start installing Hangfire SQL objects... 
+2022-02-01 18:25:19.0766|0|INFO|Hangfire.SQLite.SQLiteStorage|Hangfire SQL objects installed. 
+2022-02-01 18:25:19.1918|0|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQLite Server: studentsdb.sqlite' 
+2022-02-01 18:25:19.1959|0|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15 
+2022-02-01 18:25:19.5646|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10820:0f854169 successfully announced in 326,8016 ms 
+2022-02-01 18:25:19.5875|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10820:0f854169 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2022-02-01 18:25:19.6308|0|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout 
+2022-02-01 18:25:20.1311|0|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-h2vdahk:10820:0f854169 all the dispatchers started 
+2022-02-01 18:25:21.4830|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-02-01 18:25:21.5652|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-02-01 18:25:21.5652|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\sasha\source\repos\ServerForReact\ServerForReact 
+2022-02-01 18:38:18.0260|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-02-01 18:38:18.0260|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 

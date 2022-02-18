@@ -53,26 +53,27 @@ namespace ServerForReact.Controllers
             return Ok();
         }
 
-        [Route("allcourses")]
+        //[Route("studentscourses/{name}")]
+        //[HttpGet]
+        //public IActionResult GetCoursesStudent(string name)
+        //{
+        //    var student = context.Users.SingleOrDefault(x => x.UserName == name);
+        //    var list = context.StudentCourses.Select(x => mapper.Map<CourseStudentViewModel>(x)).ToList();
+        //    var subs = list.Where(x => x.StudentId == student.Id);
+        //    return Ok(subs);
+        //}
+        [Route("allcourseswithstudents")]
         [HttpGet]
-        public IActionResult GetCourses()
+        public IActionResult GetAllCoursesWithStudents()
         {
-            var list = context.Courses
-                .Select(x => mapper.Map<CourseItemViewModel>(x))
-                .ToList();
-            return Ok(list);
+            var courses = context.Courses.Join(context.StudentCourses,
+                u => u.Id,
+                c => c.CourseId,
+                (u,c) => new {Name = u.Name, Id = c.StudentId}).ToList();
+
+            return Ok(courses);
         }
 
-        [Route("studentscourses/{name}")]
-        [HttpGet]
-        public IActionResult GetCoursesStudent(string name)
-        {
-            Thread.Sleep(1000);
-            var student = context.Users.SingleOrDefault(x => x.UserName == name);
-            var list = context.StudentCourses.Select(x => mapper.Map<CourseStudentViewModel>(x)).ToList();
-            var list2 = list.Where(x => x.StudentId == student.Id);
-            return Ok(list2);
-        }
 
         [Route("editcourse/{id}")]
         [HttpGet]

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using NLog;
 using ServerForReact.Abstract;
+using ServerForReact.Abstract.AbstractHangfire;
 using ServerForReact.Data;
 using ServerForReact.Data.Entities;
 using ServerForReact.Data.Identity;
@@ -24,12 +25,14 @@ namespace ServerForReact.Services
         private readonly UserManager<AppUser> userManager;
         private readonly IMapper mapper;
         private readonly ILogger<CourseService> logger;
-        public CourseService(AppEFContext context, IMapper mapper, UserManager<AppUser> userManager, ILogger<CourseService> logger)
+        private readonly IHangfireService hangfireService;
+        public CourseService(AppEFContext context, IMapper mapper, UserManager<AppUser> userManager, ILogger<CourseService> logger, IHangfireService hangfireService)
         {
             this.userManager = userManager;
             this.mapper = mapper;
             this.context = context;
             this.logger = logger;
+            this.hangfireService = hangfireService;
         }
 
         public async Task<Courses> CreateCourse(CreateCourseViewModel model)
@@ -94,6 +97,7 @@ namespace ServerForReact.Services
                 studentCourses.JoinCourse = DateTime.Now;
                 context.StudentCourses.Add(studentCourses);
                 await context.SaveChangesAsync();
+                hangfireService.SetCourseNotifications(studentCourses, student, course);
                 return studentCourses;
             }
             else
@@ -108,16 +112,11 @@ namespace ServerForReact.Services
             if (student != null && course != null)
             {
                 var find = await context.StudentCourses.SingleOrDefaultAsync(x => x.CourseId == model.CourseId && x.StudentId == student.Id);
-                if (find != null)
-                {
-                    context.StudentCourses.Remove(find);
-                    await context.SaveChangesAsync();
-                    return find;
-                }
-                else
-                {
-                    return null;
-                }
+                context.StudentCourses.Remove(find);
+                var subId = await context.StudentCourses.FirstOrDefaultAsync(x=>x.CourseId == course.Id && x.StudentId == student.Id);
+                hangfireService.DeleteCourseNotifications(subId.Id);
+                await context.SaveChangesAsync();
+                return find;
             }
             else
             {

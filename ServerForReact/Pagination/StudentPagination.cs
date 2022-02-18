@@ -8,6 +8,7 @@ using ServerForReact.Models.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace ServerForReact.Pagination
@@ -23,92 +24,78 @@ namespace ServerForReact.Pagination
             this.mapper = mapper;
             this.userManager = userManager;
         }
-        public Task <StudentPaginationResultViewModel> All()
+
+        public IQueryable<AppUser> SearchStudents(IQueryable<AppUser> query, string word)
         {
-            int page = 1;
-            int pageSize = 10;
-            var query = context.Users
-                .AsQueryable();
-
-            var model = query
-               .Skip((page - 1) * pageSize)
-               .Take(pageSize)
-               .Select(x => mapper.Map<StudentViewModel>(x))
-               .ToList();
-
-            int total = query.Count();
-            int pages = (int)Math.Ceiling(total / (double)pageSize);
-            StudentPaginationResultViewModel res = new StudentPaginationResultViewModel
+            if (word == null)
             {
-                Students = model,
-                Total = total,
-                CurrentPage = 1,
-                Pages = pages
-            };
+                return query;
+            }
 
-            return Task.FromResult(res);
+            query = query.Where(
+                  x => x.UserName.ToLower().Contains(word.ToLower())
+                  || x.Surname.ToLower().Contains(word.ToLower())
+                  || x.Email.ToLower().Contains(word.ToLower())
+                  || x.PhoneNumber.Contains(word.ToString()));
+
+            return query;
         }
-        public Task<StudentPaginationResultViewModel> UsersSorting(StudentPaginationViewModel search)
+
+        public IQueryable<AppUser> SortingStudents(IQueryable<AppUser> query, string typeOfSort, string sort)
         {
-            int page = search.Page;
-            int pageSize = 10;
-            var query = context.Users
-                .AsQueryable();
+            Dictionary<string, dynamic> OrderFunctions =
+                 new Dictionary<string, dynamic>
+                 {
+                    { "id", (Expression<Func<AppUser, long>>)(x => x.Id) },
+                    { "name",  (Expression<Func<AppUser, string>>)(x => x.UserName) },
+                    { "age",   (Expression<Func<AppUser, int>>)(x => x.Age) }
+                 };
 
-            if (search.SearchWord != null)
+            if (typeOfSort == "ascend")
             {
-                query = query.Where(
-                    x => x.UserName.ToLower().Contains(search.SearchWord.ToLower())
-                    || x.Surname.ToLower().Contains(search.SearchWord.ToLower())
-                    || x.Email.ToLower().Contains(search.SearchWord.ToLower())
-                    || x.PhoneNumber.Contains(search.SearchWord.ToString()));
+                query = Queryable.OrderBy(query, OrderFunctions[sort]);
             }
-            if (search.TypeOfSort == "ascend")
+            else if (typeOfSort == "descend")
             {
-                if (search.Sort == "name")
-                {
-                    query = query.OrderBy(x => x.UserName);
-                }
-                if (search.Sort == "id")
-                {
-                    query = query.OrderBy(x => x.Id);
-                }
-                if (search.Sort == "age")
-                {
-                    query = query.OrderBy(x => x.Age);
-                }
-            }
-            if (search.TypeOfSort == "descend")
-            {
-                if (search.Sort == "name")
-                {
-                    query = query.OrderByDescending(x => x.UserName);
-                }
-                if (search.Sort == "id")
-                {
-                    query = query.OrderByDescending(x => x.Id);
-                }
-                if (search.Sort == "age")
-                {
-                    query = query.OrderByDescending(x => x.Age);
-                }
+                query = Queryable.OrderByDescending(query, OrderFunctions[sort]);
             }
 
+            return query;
+        }
+
+        public StudentPaginationResultViewModel PaginationStudents(IQueryable<AppUser> query, int page, int pageSize)
+        {
+            if (page <= 0)
+            {
+                page = 1;
+            }
             var model = query
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .Select(x => mapper.Map<StudentViewModel>(x))
-                .ToList();
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(x => mapper.Map<StudentViewModel>(x))
+            .ToList();
             int total = query.Count();
             int pages = (int)Math.Ceiling(total / (double)pageSize);
 
-            StudentPaginationResultViewModel res = new StudentPaginationResultViewModel
+            return new StudentPaginationResultViewModel
             {
                 Students = model,
                 Total = total,
                 CurrentPage = page,
                 Pages = pages
             };
+        }
+
+        public Task<StudentPaginationResultViewModel> UsersSorting(StudentPaginationViewModel search)
+        {
+            int page = search.Page;
+            int pageSize = search.PageSize;
+            var query = context.Users
+                .AsQueryable();
+
+            query = SearchStudents(query, search.SearchWord);
+            query = SortingStudents(query, search.TypeOfSort, search.Sort);
+            StudentPaginationResultViewModel res = PaginationStudents(query, page, pageSize);
 
             return Task.FromResult(res);
         }

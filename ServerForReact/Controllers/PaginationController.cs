@@ -5,6 +5,7 @@ using ServerForReact.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ServerForReact.Controllers
@@ -15,24 +16,12 @@ namespace ServerForReact.Controllers
     {
         private readonly CoursePagination CoursePg;
         private readonly StudentPagination StudentPg;
-        public PaginationController(CoursePagination CoursePg, StudentPagination StudentPg)
+        private readonly CourseSubsPagination CourseSubsPg;
+        public PaginationController(CoursePagination CoursePg, StudentPagination StudentPg, CourseSubsPagination CourseSubsPg)
         {
             this.CoursePg = CoursePg;
             this.StudentPg = StudentPg;
-        }
-
-        [Route("allcourses")]
-        [HttpGet]
-        public IActionResult GetCourses()
-        {
-            return Ok(CoursePg.All());
-        }
-
-        [Route("allstudents")]
-        [HttpGet]
-        public IActionResult GetStudents()
-        {
-            return Ok(StudentPg.All());
+            this.CourseSubsPg = CourseSubsPg;
         }
 
         [HttpPost("coursepagination")]
@@ -46,6 +35,13 @@ namespace ServerForReact.Controllers
         public IActionResult SortStudents([FromForm] StudentPaginationViewModel model)
         {
             var res = StudentPg.UsersSorting(model);
+            return Ok(res);
+        }
+
+        [HttpPost("sortcoursessubspagination")]
+        public IActionResult SortCoursesSubs([FromForm] CourseSubsPaginationViewModel model)
+        {
+            var res = CourseSubsPg.CoursesSubsSorting(model);
             return Ok(res);
         }
     }

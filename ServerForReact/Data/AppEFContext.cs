@@ -22,6 +22,7 @@ namespace ServerForReact.Data
         }
         public DbSet<Courses> Courses{ get; set; }
         public DbSet<StudentCourses> StudentCourses { get; set; }
+        public DbSet<ScheduleHangfireJob> ScheduleHangfireJobs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
